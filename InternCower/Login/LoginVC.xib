@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="InternCower" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epe-vH-CNo">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caA-ep-dBa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_banner" translatesAutoresizingMaskIntoConstraints="NO" id="253-lV-Yww">
+                                    <rect key="frame" x="76.5" y="142" width="261" height="119"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WjO-Jz-7Zp">
+                                    <rect key="frame" x="0.0" y="291" width="414" height="196"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzJ-he-1l8">
+                                            <rect key="frame" x="15" y="8" width="384" height="50"/>
+                                            <color key="backgroundColor" name="232F5D"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="tlf-hW-YzA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trM-Fn-Owv">
+                                            <rect key="frame" x="15" y="73" width="384" height="50"/>
+                                            <color key="backgroundColor" name="232F5D"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="KXF-fN-aIM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-eW-s2d">
+                                            <rect key="frame" x="15" y="138" width="384" height="50"/>
+                                            <color key="backgroundColor" name="424E7D"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="DqR-FC-5n1"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="15"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="232F5D"/>
+                            <constraints>
+                                <constraint firstItem="253-lV-Yww" firstAttribute="top" secondItem="caA-ep-dBa" secondAttribute="top" constant="142" id="21g-Cl-5x3"/>
+                                <constraint firstAttribute="trailing" secondItem="WjO-Jz-7Zp" secondAttribute="trailing" id="9jR-9l-6Ou"/>
+                                <constraint firstItem="WjO-Jz-7Zp" firstAttribute="leading" secondItem="caA-ep-dBa" secondAttribute="leading" id="Dgc-g0-BQW"/>
+                                <constraint firstItem="253-lV-Yww" firstAttribute="centerX" secondItem="caA-ep-dBa" secondAttribute="centerX" id="Uya-Hv-HLm"/>
+                                <constraint firstItem="WjO-Jz-7Zp" firstAttribute="centerX" secondItem="caA-ep-dBa" secondAttribute="centerX" id="aQb-Ty-QOw"/>
+                                <constraint firstItem="WjO-Jz-7Zp" firstAttribute="top" secondItem="253-lV-Yww" secondAttribute="bottom" constant="30" id="gSj-Jo-FE9"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cIk-mw-pNe" firstAttribute="bottom" secondItem="caA-ep-dBa" secondAttribute="bottom" id="7cz-UU-pZN"/>
+                        <constraint firstItem="caA-ep-dBa" firstAttribute="top" secondItem="9Zv-en-zSD" secondAttribute="top" id="ZHt-XK-YEk"/>
+                        <constraint firstItem="caA-ep-dBa" firstAttribute="bottom" secondItem="9Zv-en-zSD" secondAttribute="bottom" id="czQ-N8-OKn"/>
+                        <constraint firstItem="caA-ep-dBa" firstAttribute="width" secondItem="cIk-mw-pNe" secondAttribute="width" id="ia7-eU-w4Q"/>
+                        <constraint firstItem="caA-ep-dBa" firstAttribute="leading" secondItem="9Zv-en-zSD" secondAttribute="leading" id="ier-5o-lAh"/>
+                        <constraint firstItem="caA-ep-dBa" firstAttribute="trailing" secondItem="9Zv-en-zSD" secondAttribute="trailing" id="teG-fD-vNe"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="9Zv-en-zSD"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="cIk-mw-pNe"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="232F5D"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="epe-vH-CNo" secondAttribute="trailing" id="LH9-rZ-SBI"/>
+                <constraint firstItem="epe-vH-CNo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LXL-uz-Epw"/>
+                <constraint firstItem="epe-vH-CNo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fe5-IB-mbb"/>
+                <constraint firstAttribute="bottom" secondItem="epe-vH-CNo" secondAttribute="bottom" id="o07-TK-re3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_banner" width="261" height="119"/>
+        <namedColor name="232F5D">
+            <color red="0.13725490196078433" green="0.18431372549019609" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="424E7D">
+            <color red="0.25882352941176473" green="0.30588235294117649" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
