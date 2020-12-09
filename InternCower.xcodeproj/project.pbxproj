@@ -16,6 +16,7 @@
 		75252F9F257E07260067B851 /* InternCowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252F9E257E07260067B851 /* InternCowerUITests.swift */; };
 		75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252FAD257E0B1F0067B851 /* LoginVC.swift */; };
 		75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75252FAE257E0B1F0067B851 /* LoginVC.xib */; };
+		7525E80B2580A775004FB8B4 /* apiCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525E80A2580A775004FB8B4 /* apiCommon.swift */; };
 		75861729257F6BC3002D8B82 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75861728257F6BC3002D8B82 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		75252FA0257E07260067B851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75252FAD257E0B1F0067B851 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		75252FAE257E0B1F0067B851 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		7525E80A2580A775004FB8B4 /* apiCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiCommon.swift; sourceTree = "<group>"; };
 		75861728257F6BC3002D8B82 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 		75252F7B257E071E0067B851 /* InternCower */ = {
 			isa = PBXGroup;
 			children = (
+				7525E8062580A461004FB8B4 /* Utils */,
 				75861727257F6BA1002D8B82 /* Home */,
 				75252FAC257E0A870067B851 /* Login */,
 				75252F7C257E071E0067B851 /* AppDelegate.swift */,
@@ -140,6 +143,22 @@
 				75252FAE257E0B1F0067B851 /* LoginVC.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		7525E8062580A461004FB8B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7525E8072580A46F004FB8B4 /* NetworkingService */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7525E8072580A46F004FB8B4 /* NetworkingService */ = {
+			isa = PBXGroup;
+			children = (
+				7525E80A2580A775004FB8B4 /* apiCommon.swift */,
+			);
+			path = NetworkingService;
 			sourceTree = "<group>";
 		};
 		75861727257F6BA1002D8B82 /* Home */ = {
@@ -285,6 +304,7 @@
 				75252F81257E071E0067B851 /* ViewController.swift in Sources */,
 				75861729257F6BC3002D8B82 /* HomeVC.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
+				7525E80B2580A775004FB8B4 /* apiCommon.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
