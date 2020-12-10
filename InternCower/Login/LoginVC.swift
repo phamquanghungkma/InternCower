@@ -12,8 +12,7 @@ class LoginVC: UIViewController {
     static let identifier = "LoginVc"
     
     @IBOutlet weak var EmailTF: UITextField!
-    
-    
+
     @IBOutlet weak var LoginButton: UIButton!
     
     @IBOutlet weak var PassTF: UITextField!

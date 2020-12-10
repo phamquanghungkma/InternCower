@@ -18,6 +18,9 @@
 		75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75252FAE257E0B1F0067B851 /* LoginVC.xib */; };
 		7525E80B2580A775004FB8B4 /* apiCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525E80A2580A775004FB8B4 /* apiCommon.swift */; };
 		7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA7E25820D69002758F8 /* ReportVC.swift */; };
+		7562EA83258212DA002758F8 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA81258212DA002758F8 /* ReportCell.swift */; };
+		7562EA84258212DA002758F8 /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7562EA82258212DA002758F8 /* ReportCell.xib */; };
+		7562EA8725821FF5002758F8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA8625821FF5002758F8 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		75252FAE257E0B1F0067B851 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7525E80A2580A775004FB8B4 /* apiCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiCommon.swift; sourceTree = "<group>"; };
 		7562EA7E25820D69002758F8 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		7562EA81258212DA002758F8 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		7562EA82258212DA002758F8 /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
+		7562EA8625821FF5002758F8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		75252F7B257E071E0067B851 /* InternCower */ = {
 			isa = PBXGroup;
 			children = (
+				7562EA8525821FD0002758F8 /* Extension */,
 				7525E8062580A461004FB8B4 /* Utils */,
 				75861727257F6BA1002D8B82 /* Home */,
 				75252FAC257E0A870067B851 /* Login */,
@@ -161,9 +168,27 @@
 			path = NetworkingService;
 			sourceTree = "<group>";
 		};
+		7562EA80258212B4002758F8 /* ReportView */ = {
+			isa = PBXGroup;
+			children = (
+				7562EA81258212DA002758F8 /* ReportCell.swift */,
+				7562EA82258212DA002758F8 /* ReportCell.xib */,
+			);
+			path = ReportView;
+			sourceTree = "<group>";
+		};
+		7562EA8525821FD0002758F8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7562EA8625821FF5002758F8 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		75861727257F6BA1002D8B82 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7562EA80258212B4002758F8 /* ReportView */,
 				7562EA7E25820D69002758F8 /* ReportVC.swift */,
 			);
 			path = Home;
@@ -273,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7562EA84258212DA002758F8 /* ReportCell.xib in Resources */,
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
@@ -303,9 +329,11 @@
 			files = (
 				75252F81257E071E0067B851 /* ViewController.swift in Sources */,
 				7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */,
+				7562EA8725821FF5002758F8 /* Extension.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* apiCommon.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
+				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
