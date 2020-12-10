@@ -15,7 +15,8 @@ class ReportVC: UIViewController {
         super.viewDidLoad()
         tableReport.dataSource = self
         tableReport.delegate = self
-        
+//        tableReport.separatorColor = .clear
+        tableReport.separatorStyle = .singleLine
         
     }
 
@@ -35,9 +36,9 @@ extension ReportVC : UITableViewDataSource{
       
         cell.labelReport.text = " FY 18/9 - T:4,5,6 "
         cell.labelReport.numberOfLines = 0
-        cell.labelReport.lineBreakMode = NSLineBreakMode.byWordWrapping
-        cell.labelReport.frame = CGRect(x: 0, y: 0, width: cell.labelReport.frame.width, height: CGFloat.greatestFiniteMagnitude)
-        cell.labelReport.sizeToFit()
+//        cell.labelReport.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        cell.labelReport.frame = CGRect(x: 0, y: 0, width: cell.labelReport.frame.width, height: CGFloat.greatestFiniteMagnitude)
+//        cell.labelReport.sizeToFit()
 //        heightCells.append(cell.title.frame.height)
         
         return cell
@@ -50,5 +51,8 @@ extension ReportVC : UITableViewDataSource{
 extension ReportVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }

@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let loginVc = LoginVC()
         
         let reportVc =  Storyboard.view(identifier: "navigation")
+     
         window?.rootViewController = reportVc
         window?.makeKeyAndVisible()
         return true
