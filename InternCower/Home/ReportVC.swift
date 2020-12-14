@@ -51,6 +51,9 @@ extension ReportVC : UITableViewDataSource{
 extension ReportVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+        let activitiesVC =  ActivitiesVC()
+        navigationController?.pushViewController(activitiesVC, animated: true)
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

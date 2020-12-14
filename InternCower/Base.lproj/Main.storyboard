@@ -44,11 +44,43 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableReport" destination="6bQ-Dp-oT2" id="lou-4O-n4E"/>
+                        <segue destination="CNG-KS-6uE" kind="push" id="HsN-ax-LGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lK-oj-9oC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="-153"/>
+        </scene>
+        <!--ActivitiesVC-->
+        <scene sceneID="Mur-6v-YxW">
+            <objects>
+                <viewController id="CNG-KS-6uE" customClass="ActivitiesVC" customModule="InternCower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCg-Av-X0h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-FP-rPt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kxx-FP-rPt" firstAttribute="leading" secondItem="BLV-uR-U2i" secondAttribute="leading" id="HKo-o4-uKS"/>
+                            <constraint firstItem="kxx-FP-rPt" firstAttribute="top" secondItem="BLV-uR-U2i" secondAttribute="top" id="KmD-3M-hzQ"/>
+                            <constraint firstItem="BLV-uR-U2i" firstAttribute="trailing" secondItem="kxx-FP-rPt" secondAttribute="trailing" id="cK7-jG-9Aa"/>
+                            <constraint firstItem="BLV-uR-U2i" firstAttribute="bottom" secondItem="kxx-FP-rPt" secondAttribute="bottom" id="kPx-b3-P5T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BLV-uR-U2i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VZw-Ko-KzV"/>
+                    <connections>
+                        <outlet property="tableView" destination="kxx-FP-rPt" id="qB3-s0-Ck5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-aT-EZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="-181"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WtR-LL-A0s">

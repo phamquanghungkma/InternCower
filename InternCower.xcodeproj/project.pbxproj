@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750118EE25873DC6003EB526 /* ActivitiesVC.swift */; };
+		750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750118EF25873DC6003EB526 /* ActivitiesVC.xib */; };
+		750BBF3325874FFC00139591 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BBF3125874FFC00139591 /* ActivitiesCell.swift */; };
+		750BBF3425874FFC00139591 /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BBF3225874FFC00139591 /* ActivitiesCell.xib */; };
 		75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252F7C257E071E0067B851 /* AppDelegate.swift */; };
 		75252F81257E071E0067B851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252F80257E071E0067B851 /* ViewController.swift */; };
 		75252F84257E071E0067B851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75252F82257E071E0067B851 /* Main.storyboard */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750118EE25873DC6003EB526 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
+		750118EF25873DC6003EB526 /* ActivitiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesVC.xib; sourceTree = "<group>"; };
+		750BBF3125874FFC00139591 /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
+		750BBF3225874FFC00139591 /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		75252F79257E071E0067B851 /* InternCower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternCower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75252F7C257E071E0067B851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75252F80257E071E0067B851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750118ED25873D7B003EB526 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				750BBF2C25874F8700139591 /* CellCustom */,
+				750118EE25873DC6003EB526 /* ActivitiesVC.swift */,
+				750118EF25873DC6003EB526 /* ActivitiesVC.xib */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		750BBF2C25874F8700139591 /* CellCustom */ = {
+			isa = PBXGroup;
+			children = (
+				750BBF3125874FFC00139591 /* ActivitiesCell.swift */,
+				750BBF3225874FFC00139591 /* ActivitiesCell.xib */,
+			);
+			path = CellCustom;
+			sourceTree = "<group>";
+		};
 		75252F70257E071E0067B851 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +138,7 @@
 		75252F7B257E071E0067B851 /* InternCower */ = {
 			isa = PBXGroup;
 			children = (
+				750118ED25873D7B003EB526 /* Activities */,
 				7562EA8525821FD0002758F8 /* Extension */,
 				7525E8062580A461004FB8B4 /* Utils */,
 				75861727257F6BA1002D8B82 /* Home */,
@@ -299,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7562EA84258212DA002758F8 /* ReportCell.xib in Resources */,
+				750BBF3425874FFC00139591 /* ActivitiesCell.xib in Resources */,
+				750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */,
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
@@ -330,10 +360,12 @@
 				75252F81257E071E0067B851 /* ViewController.swift in Sources */,
 				7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */,
 				7562EA8725821FF5002758F8 /* Extension.swift in Sources */,
+				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* apiCommon.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
 				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
+				750BBF3325874FFC00139591 /* ActivitiesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
