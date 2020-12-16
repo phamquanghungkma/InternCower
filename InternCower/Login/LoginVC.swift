@@ -69,18 +69,24 @@ class LoginVC: UIViewController {
                
                 if(!EmailTF.hasText && !PassTF.hasText){
                     let alert = UIAlertController(title: "Invalid", message: "Username and Password must not be empty", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
                     present(alert, animated: false)
                     print("You must enter email and password")
                     return
                 }
                 if(!EmailTF.hasText){
                     let alert = UIAlertController(title: "Invalid", message: "Username must not be empty", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
                     present(alert, animated: false)
                     print("Email empty")
                     return
                 }
                 if(!PassTF.hasText){
                     let alert = UIAlertController(title: "Invalid", message: " Password must not be empty", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
                     present(alert, animated: false)
                     print("Pass empty")
                     return
