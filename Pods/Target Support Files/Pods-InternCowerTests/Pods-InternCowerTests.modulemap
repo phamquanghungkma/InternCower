@@ -1,0 +1,6 @@
+framework module Pods_InternCowerTests {
+  umbrella header "Pods-InternCowerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

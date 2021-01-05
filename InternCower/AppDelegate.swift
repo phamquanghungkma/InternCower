@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let loginVc = LoginVC()
+        let loginVc = LoginVC()
         
-        let reportVc =  Storyboard.view(identifier: "navigation")
+//        let reportVc =  Storyboard.view(identifier: "navigation")
      
-        window?.rootViewController = reportVc
+        window?.rootViewController = loginVc
         window?.makeKeyAndVisible()
         return true
     }

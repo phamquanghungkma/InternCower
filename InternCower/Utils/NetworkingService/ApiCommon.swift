@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct apiCommon {
+struct ApiCommon {
     
     //MARK: rootAPI
     static let BASE_URL: String = "https://cowater.grooo.com.vn/api"
     
     // MARK: Handle Authen and Login
-    static let LOGIN_URL : String = ""
+    static let LOGIN_URL : String = "\(BASE_URL)/users/login"
     static let LOGOUT_URL : String = ""
     static let REGISTER_URL : String = ""
     
