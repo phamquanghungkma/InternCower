@@ -60,22 +60,23 @@ class LoginVC: UIViewController {
         guard let email = EmailTF.text, let password = PassTF.text else {
             return
         }
+         
         
         LoginService.shared.login(email, password) { result in
             switch result {
             case .success(let user):
-                let storyboard  = Storyboard(name:"Main",bundle: nil)
-                let navigationController = storyboard.instantiateViewController(identifier: "navigation")
-              
-               let status = UserDefaults.standard.bool(forKey: "isLogin")
-                print("status1", status)
+                let status = UserDefaults.standard.bool(forKey: "isLogin")
+                    let reportVc =  Storyboard.view(identifier: "navigation")
+                    reportVc.modalPresentationStyle = .fullScreen
+                    
+                    self.show(reportVc, sender: nil)
                 break
             case .failure(let error):
-                print("AAA",error.localizedDescription)
                 break
             }
-            
+
         }
+        
         
     }
     
@@ -117,5 +118,8 @@ class LoginVC: UIViewController {
         
     }
     
+    
+}
+extension LoginVC {
     
 }

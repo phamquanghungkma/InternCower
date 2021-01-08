@@ -16,8 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginVc = LoginVC()
         
 //        let reportVc =  Storyboard.view(identifier: "navigation")
-     
-        window?.rootViewController = loginVc
+        var rootVC : UIViewController?
+        let status = UserDefaults.standard.bool(forKey: "isLogin")
+        if(status == true){
+            rootVC = Storyboard.view(identifier: "navigation")
+        } else {
+            rootVC = loginVc
+        }
+        
+        window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         return true
     }

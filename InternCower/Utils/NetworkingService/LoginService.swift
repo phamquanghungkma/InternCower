@@ -10,16 +10,16 @@ import Foundation
 import Alamofire
 
 
-//
-//
+//PLLT001maikieulc
+//12345678
 class LoginService {
     public static let shared: LoginService = LoginService()
     
     func login(_ username:String,_ password: String , completion: @escaping( (Result<User?,Error>) -> Void ))  {
         
         let parameters: [String: Any] = [
-            "username": "PLLT001maikieulc",
-            "password": 12345678,
+            "username": username,
+            "password": password,
             "lang": "vn",
             "mobile": 1
         ]
