@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SideMenu
 
 class ReportVC: UIViewController {
+    var menu : SideMenuNavigationController?
     
     @IBOutlet weak var tableReport: UITableView!
     override func viewDidLoad() {
@@ -18,10 +20,27 @@ class ReportVC: UIViewController {
 //        tableReport.separatorColor = .clear
         tableReport.separatorStyle = .singleLine
         
+        initLeftMenu()
+        
+
+        
     }
-
+    func initLeftMenu(){
+        menu = SideMenuNavigationController(rootViewController: MenuViewController())
+        menu?.leftSide = true
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        SideMenuManager.default.leftMenuNavigationController = menu
+        
+        
+        
+    }
    
-
+    
+    @IBAction func didTouchMenu(_ sender: Any) {
+        present(menu!, animated: true)
+        
+    }
+    
    
 
 }

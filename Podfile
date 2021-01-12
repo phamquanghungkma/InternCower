@@ -13,6 +13,7 @@ target 'InternCower' do
   end
 	
 pod 'Alamofire', '~> 5.2'
+pod 'SideMenu'
   
 
 end

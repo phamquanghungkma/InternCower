@@ -40,7 +40,11 @@
                         <viewLayoutGuide key="safeArea" id="ZIe-lJ-lsj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Report" id="Q3t-8P-Whp" userLabel="Report">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_menu" id="OZq-Yb-YeM"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_menu" id="OZq-Yb-YeM">
+                            <connections>
+                                <action selector="didTouchMenu:" destination="gz2-KO-IMM" id="Ine-73-9sr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableReport" destination="6bQ-Dp-oT2" id="lou-4O-n4E"/>
@@ -80,12 +84,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzn-aT-EZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="-181"/>
+            <point key="canvasLocation" x="1799" y="179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WtR-LL-A0s">
             <objects>
-                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="D42-L6-mRW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="D42-L6-mRW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jdj-Ch-1b5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

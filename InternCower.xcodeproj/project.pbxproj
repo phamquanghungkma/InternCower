@@ -29,6 +29,7 @@
 		7562EA83258212DA002758F8 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA81258212DA002758F8 /* ReportCell.swift */; };
 		7562EA84258212DA002758F8 /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7562EA82258212DA002758F8 /* ReportCell.xib */; };
 		7562EA8725821FF5002758F8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA8625821FF5002758F8 /* Extension.swift */; };
+		75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE418B25AD7FD400285CCB /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		7562EA81258212DA002758F8 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		7562EA82258212DA002758F8 /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
 		7562EA8625821FF5002758F8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		75FE418B25AD7FD400285CCB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7C0EE1A51569F0CB18CB495C /* Pods-InternCower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCower.release.xcconfig"; path = "Target Support Files/Pods-InternCower/Pods-InternCower.release.xcconfig"; sourceTree = "<group>"; };
 		843C127A15E6AAE37A6D1F18 /* Pods_InternCowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternCowerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7538B6C259BA5995F6AF805 /* Pods-InternCowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCowerTests.debug.xcconfig"; path = "Target Support Files/Pods-InternCowerTests/Pods-InternCowerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				7562EA80258212B4002758F8 /* ReportView */,
 				7562EA7E25820D69002758F8 /* ReportVC.swift */,
+				75FE418B25AD7FD400285CCB /* MenuViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* ApiCommon.swift in Sources */,
+				75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
 				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
 				7547243725A4551D004877E1 /* UserModel.swift in Sources */,

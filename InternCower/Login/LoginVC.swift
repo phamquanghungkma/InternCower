@@ -68,7 +68,6 @@ class LoginVC: UIViewController {
                 let status = UserDefaults.standard.bool(forKey: "isLogin")
                     let reportVc =  Storyboard.view(identifier: "navigation")
                     reportVc.modalPresentationStyle = .fullScreen
-                    
                     self.show(reportVc, sender: nil)
                 break
             case .failure(let error):
