@@ -25,6 +25,9 @@
 		7525E80B2580A775004FB8B4 /* ApiCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525E80A2580A775004FB8B4 /* ApiCommon.swift */; };
 		7547243725A4551D004877E1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7547243625A4551D004877E1 /* UserModel.swift */; };
 		7547243925A4572E004877E1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7547243825A4572E004877E1 /* LoginService.swift */; };
+		754FF21425AECB1500189090 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FF21225AECB1500189090 /* MenuTableViewCell.swift */; };
+		754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754FF21325AECB1500189090 /* MenuTableViewCell.xib */; };
+		754FF21725AED72500189090 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754FF21625AED72500189090 /* MenuItemModel.swift */; };
 		7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA7E25820D69002758F8 /* ReportVC.swift */; };
 		7562EA83258212DA002758F8 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA81258212DA002758F8 /* ReportCell.swift */; };
 		7562EA84258212DA002758F8 /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7562EA82258212DA002758F8 /* ReportCell.xib */; };
@@ -75,6 +78,9 @@
 		7525E80A2580A775004FB8B4 /* ApiCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCommon.swift; sourceTree = "<group>"; };
 		7547243625A4551D004877E1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7547243825A4572E004877E1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		754FF21225AECB1500189090 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		754FF21325AECB1500189090 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		754FF21625AED72500189090 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		7562EA7E25820D69002758F8 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		7562EA81258212DA002758F8 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		7562EA82258212DA002758F8 /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
@@ -231,8 +237,18 @@
 			isa = PBXGroup;
 			children = (
 				7547243625A4551D004877E1 /* UserModel.swift */,
+				754FF21625AED72500189090 /* MenuItemModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		754FF20D25AEC88700189090 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				754FF21225AECB1500189090 /* MenuTableViewCell.swift */,
+				754FF21325AECB1500189090 /* MenuTableViewCell.xib */,
+			);
+			path = MenuView;
 			sourceTree = "<group>";
 		};
 		7562EA80258212B4002758F8 /* ReportView */ = {
@@ -255,6 +271,7 @@
 		75861727257F6BA1002D8B82 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				754FF20D25AEC88700189090 /* MenuView */,
 				7562EA80258212B4002758F8 /* ReportView */,
 				7562EA7E25820D69002758F8 /* ReportVC.swift */,
 				75FE418B25AD7FD400285CCB /* MenuViewController.swift */,
@@ -283,6 +300,7 @@
 				75252F76257E071E0067B851 /* Frameworks */,
 				75252F77257E071E0067B851 /* Resources */,
 				4E9FFFA8F85BC63A45AE78EB /* [CP] Embed Pods Frameworks */,
+				75B9507525AFE69F00AEBC80 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -384,6 +402,7 @@
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
+				754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */,
 				75252F84257E071E0067B851 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +463,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		75B9507525AFE69F00AEBC80 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		B6E876C1DF2ECCA2E0BA0D32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,12 +512,14 @@
 				75252F81257E071E0067B851 /* ViewController.swift in Sources */,
 				7547243925A4572E004877E1 /* LoginService.swift in Sources */,
 				7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */,
+				754FF21725AED72500189090 /* MenuItemModel.swift in Sources */,
 				7562EA8725821FF5002758F8 /* Extension.swift in Sources */,
 				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* ApiCommon.swift in Sources */,
 				75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
+				754FF21425AECB1500189090 /* MenuTableViewCell.swift in Sources */,
 				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
 				7547243725A4551D004877E1 /* UserModel.swift in Sources */,
 				750BBF3325874FFC00139591 /* ActivitiesCell.swift in Sources */,

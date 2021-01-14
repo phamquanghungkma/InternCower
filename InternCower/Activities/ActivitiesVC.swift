@@ -17,7 +17,4 @@ class ActivitiesVC: UIViewController {
         
     }
 
-
-  
-
 }

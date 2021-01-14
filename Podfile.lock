@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.1)
   - SideMenu (6.5.0)
+  - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - SideMenu
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - SideMenu
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 93660201287adc2f0b0726b43f9b47068ba87550
+PODFILE CHECKSUM: aaccfe21a6619f1c041531ff81cb760585f97af2
 
 COCOAPODS: 1.7.5

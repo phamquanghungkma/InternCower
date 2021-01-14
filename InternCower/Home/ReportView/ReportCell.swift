@@ -9,10 +9,8 @@
 import UIKit
 
 class ReportCell: UITableViewCell {
-    
 
     @IBOutlet weak var labelReport: UILabel!
-    
     @IBOutlet weak var nextImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +22,4 @@ class ReportCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

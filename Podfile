@@ -14,6 +14,7 @@ target 'InternCower' do
 	
 pod 'Alamofire', '~> 5.2'
 pod 'SideMenu'
+pod 'SwiftLint'
   
 
 end

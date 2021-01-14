@@ -11,31 +11,29 @@ import Alamofire
 
 class LoginVC: UIViewController {
     static let identifier = "LoginVc"
+    // xem lại cách đặt tên biến
+    // tên biên: camel case
+    // tên class: pascal case
+    // Cài pod tên là swiftlint
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var EmailTF: UITextField!
-    
-    @IBOutlet weak var LoginButton: UIButton!
-    
-    @IBOutlet weak var PassTF: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         setUpView()
     }
-    func setUpView(){
+    func setUpView() {
         // config UITextField
-        
-        configUITextField(textField: EmailTF)
-        configUITextField(textField: PassTF)
-        PassTF.isSecureTextEntry = true
+        configUITextField(textField: emailTextField)
+        configUITextField(textField: passwordTextField)
+        passwordTextField.isSecureTextEntry = true
         // config Button
         configButton()
-        
-        
     }
-    func configUITextField(textField: UITextField){
+    func configUITextField(textField: UITextField) {
         let myColor = UIColor.white
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = myColor.cgColor
@@ -43,82 +41,55 @@ class LoginVC: UIViewController {
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftViewMode = .always
         //        textField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
-        
     }
-    
-    func configButton(){
+    func configButton() {
         //        LoginButton.isEnabled = false
-        LoginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
-        
+        loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     }
-    
-    
-    
-    
-    @objc func handleLogin(){
+    @objc func handleLogin() {
         formValidation()
-        guard let email = EmailTF.text, let password = PassTF.text else {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-         
-        
         LoginService.shared.login(email, password) { result in
             switch result {
-            case .success(let user):
-                let status = UserDefaults.standard.bool(forKey: "isLogin")
+            case .success:
                     let reportVc =  Storyboard.view(identifier: "navigation")
                     reportVc.modalPresentationStyle = .fullScreen
                     self.show(reportVc, sender: nil)
-                break
-            case .failure(let error):
+            case .failure:
                 break
             }
 
         }
-        
-        
     }
-    
-    
     func formValidation() {
-        
-        guard EmailTF.hasText, PassTF.hasText
+        guard emailTextField.hasText, passwordTextField.hasText
             else {
-                
-                if(!EmailTF.hasText && !PassTF.hasText){
+                if !emailTextField.hasText && !passwordTextField.hasText {
                     let alert = UIAlertController(title: "Invalid", message: "Username and Password must not be empty", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                    
                     present(alert, animated: false)
                     print("You must enter email and password")
                     return
                 }
-                if(!EmailTF.hasText){
+                if !emailTextField.hasText {
                     let alert = UIAlertController(title: "Invalid", message: "Username must not be empty", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                    
                     present(alert, animated: false)
                     print("Email empty")
                     return
                 }
-                if(!PassTF.hasText){
+                if !emailTextField.hasText {
                     let alert = UIAlertController(title: "Invalid", message: " Password must not be empty", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                    
                     present(alert, animated: false)
                     print("Pass empty")
                     return
                 }
                 return
         }
-        
         print("Login button is called")
         return
-        
     }
-    
-    
-}
-extension LoginVC {
-    
 }

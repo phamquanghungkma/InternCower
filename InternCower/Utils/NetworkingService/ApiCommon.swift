@@ -9,14 +9,10 @@
 import Foundation
 
 struct ApiCommon {
-    
-    //MARK: rootAPI
-    static let BASE_URL: String = "https://cowater.grooo.com.vn/api"
-    
+    // MARK: - rootAPI
+    static let baseUrl: String = "https://cowater.grooo.com.vn/api"
     // MARK: Handle Authen and Login
-    static let LOGIN_URL : String = "\(BASE_URL)/users/login"
-    static let LOGOUT_URL : String = ""
-    static let REGISTER_URL : String = ""
-    
-    
+    static let loginUrl: String = "\(baseUrl)/users/login"
+    static let logoutUrl: String = ""
+    static let registerUrl: String = ""
 }

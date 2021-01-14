@@ -9,13 +9,11 @@
 import Foundation
 import Alamofire
 
-
-//PLLT001maikieulc
-//12345678
+// PLLT001maikieulc
+// 12345678
 class LoginService {
     public static let shared: LoginService = LoginService()
-    
-    func login(_ username:String,_ password: String , completion: @escaping( (Result<User?,Error>) -> Void ))  {
+    func login(_ username: String, _ password: String, completion: @escaping( (Result<User?, Error>) -> Void )) {
         
         let parameters: [String: Any] = [
             "username": username,
@@ -23,7 +21,7 @@ class LoginService {
             "lang": "vn",
             "mobile": 1
         ]
-        AF.request(ApiCommon.LOGIN_URL,method: .post, parameters: parameters).validate(statusCode: 200..<300).responseJSON { response in
+        AF.request(ApiCommon.loginUrl, method: .post, parameters: parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success :
                 print(response)
@@ -33,21 +31,27 @@ class LoginService {
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
                     let accessToken = user.token
-                    UserDefaults.standard.setValue(true, forKey: "isLogin")
+//                    UserDefaults.standard.setValue(true, forKey: "isLogin")
+                    UserDefaults.standard.setValue(true, forKey: KeyString.isLogin)
+                    UserDefaults.standard.setValue(true, forKey: .isLogin)
                     UserDefaults.standard.setValue(accessToken, forKey: "Token")
                     completion(.success(user))
                 } catch let e {
-                    print(e.localizedDescription);
+                    print(e.localizedDescription)
                     completion(.failure(e))
                 }
                 
             case .failure(let error):
                 completion(.failure(error))
             }
-        
         }
-      
     }
-    
-  
+}
+
+struct KeyString {
+    static let isLogin = "isLogin"
+}
+
+extension String {
+    static var isLogin = "isLogin"
 }

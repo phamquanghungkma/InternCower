@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct User : Decodable  {
+struct User: Decodable {
     var token: String!
     var profile: Profile
 }
