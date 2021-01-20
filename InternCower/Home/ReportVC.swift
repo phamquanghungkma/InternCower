@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 
-class ReportVC: UIViewController {
+class ReportVC: BaseController {
     var menu: SideMenuNavigationController?
     var reportModels: ReportModels?
     @IBOutlet weak var tableReport: UITableView!

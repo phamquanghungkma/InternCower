@@ -15,8 +15,8 @@ struct ResponseData: Decodable {
     }
 }
 struct ReportActivityData: Decodable {
-    var reportActivity: [ReportActivityModel]
-    private  enum CodingKeys: String, CodingKey {
+    var reportActivity: [ReportActivityModel]?
+    private enum CodingKeys: String, CodingKey {
         case reportActivity = "report_activity"
     }
 }

@@ -11,7 +11,7 @@ import Alamofire
 
 class ReportActivityService {
     public static var shared = ReportActivityService()
-    func fetchReportActivityData(reportID:Int,completion:@escaping((Result<ResponseData?,Error>) -> Void)) {
+    func fetchReportActivityData(reportID:Int,completion:@escaping((Result<[ReportActivityModel]?,Error>) -> Void)) {
         let parameters: [String: Any] = [
                       "lang": "vn",
                       "token": Constants.tokenUser ?? "",
@@ -25,10 +25,17 @@ class ReportActivityService {
                     return
                 }
                 do {
-                    let modelData = try JSONDecoder().decode(ResponseData.self, from: data)
-                    let reportActivity = modelData.data?.reportActivity
-                    print("reportActivity",reportActivity)
-                    completion(.success(modelData))
+                    var modelData = try JSONDecoder().decode(ResponseData.self, from: data)
+                    let array = modelData.data?.reportActivity
+                    modelData.data?.reportActivity = array?.filter {
+                        $0.projectActivity != nil
+                    }
+                    for data in modelData.data!.reportActivity! {
+                        print(data.projectActivity)
+                    }
+                    let reportActivity = modelData.data
+                    let reportActivityModel = reportActivity?.reportActivity
+                    completion(.success(reportActivityModel))
                 } catch let e {
                     completion(.failure(e))
                 }

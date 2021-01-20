@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1584F4B50BECF1A880662871 /* Pods_InternCower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7AFBFC7A50D26E09AE0A99 /* Pods_InternCower.framework */; };
+		1827C34025B87E5400B2D656 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C33F25B87E5400B2D656 /* BaseController.swift */; };
 		6DE332A62C1223D2D03F966C /* Pods_InternCowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843C127A15E6AAE37A6D1F18 /* Pods_InternCowerTests.framework */; };
 		750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750118EE25873DC6003EB526 /* ActivitiesVC.swift */; };
 		750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750118EF25873DC6003EB526 /* ActivitiesVC.xib */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1827C33F25B87E5400B2D656 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		36F4D99CAE36C50B54B4189C /* Pods-InternCowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCowerTests.release.xcconfig"; path = "Target Support Files/Pods-InternCowerTests/Pods-InternCowerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F7AFBFC7A50D26E09AE0A99 /* Pods_InternCower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternCower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C3FDBDBA7E297310050A32 /* Pods-InternCower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCower.debug.xcconfig"; path = "Target Support Files/Pods-InternCower/Pods-InternCower.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				75252F85257E07250067B851 /* Assets.xcassets */,
 				75252F87257E07250067B851 /* LaunchScreen.storyboard */,
 				75252F8A257E07250067B851 /* Info.plist */,
+				1827C33F25B87E5400B2D656 /* BaseController.swift */,
 			);
 			path = InternCower;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				75FBB5DF25B57AA600A1D5BE /* Constants.swift in Sources */,
 				7551AAD125B8175600195557 /* ReportActivityModel.swift in Sources */,
 				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
+				1827C34025B87E5400B2D656 /* BaseController.swift in Sources */,
 				7551AACF25B80A9C00195557 /* ReportActivityService.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* ApiCommon.swift in Sources */,
@@ -747,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73RF6G97S8;
 				INFOPLIST_FILE = InternCower/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -767,7 +771,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73RF6G97S8;
 				INFOPLIST_FILE = InternCower/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

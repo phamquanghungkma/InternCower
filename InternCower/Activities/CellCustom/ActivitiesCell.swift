@@ -21,6 +21,8 @@ class ActivitiesCell: UITableViewCell {
 
     }
     func setup(model: ProjectActivity) {
-        
+        self.titleLabel.text = model.name
+        self.countLabel.text = "(0)"
+        self.countLabel.textColor = .red
     }
 }

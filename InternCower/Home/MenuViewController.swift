@@ -22,6 +22,7 @@ class MenuViewController: UITableViewController {
         tableView.backgroundColor = UIColor.myBoldPurple
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         // Do any additional setup after loading the view.
+    
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            return itemsMenu.count
