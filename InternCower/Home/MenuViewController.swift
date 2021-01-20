@@ -21,7 +21,6 @@ class MenuViewController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.myBoldPurple
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
-
         // Do any additional setup after loading the view.
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,8 +34,31 @@ class MenuViewController: UITableViewController {
         }
         return UITableViewCell()
     }
-
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? MenuTableViewCell {
+            if cell.titleLabel.text == MenuLabel.logout.rawValue {
+                    print("Handle logout")
+                
+            }
+        }
+
+    }
+    //MARK:-Header for UITableVie
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        let accountNameLabel = UILabel(frame: CGRect(x: 12, y: 0, width: tableView.frame.width, height: 60))
+        header.addSubview(accountNameLabel)
+        accountNameLabel.textColor = .green
+        accountNameLabel.text = Constants.accountName
+        accountNameLabel.textColor = .white
+        accountNameLabel.textAlignment = .justified
+        accountNameLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        return header
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 80
     }
 }

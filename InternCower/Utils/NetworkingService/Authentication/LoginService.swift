@@ -14,7 +14,6 @@ import Alamofire
 class LoginService {
     public static let shared: LoginService = LoginService()
     func login(_ username: String, _ password: String, completion: @escaping( (Result<User?, Error>) -> Void )) {
-        
         let parameters: [String: Any] = [
             "username": username,
             "password": password,
@@ -24,23 +23,24 @@ class LoginService {
         AF.request(ApiCommon.loginUrl, method: .post, parameters: parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success :
-                print(response)
+//                print(response)
                 guard let data = response.data else {
                     return
                 }
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
-                    let accessToken = user.token
-//                    UserDefaults.standard.setValue(true, forKey: "isLogin")
+                    Constants.accountName = user.profile.name
+                    Constants.tokenUser = user.token
+                    Constants.projectID = user.profile.project.id
                     UserDefaults.standard.setValue(true, forKey: KeyString.isLogin)
-                    UserDefaults.standard.setValue(true, forKey: .isLogin)
-                    UserDefaults.standard.setValue(accessToken, forKey: "Token")
+                    UserDefaults.standard.setValue(Constants.tokenUser, forKey: KeyString.tokenUser)
+                    UserDefaults.standard.setValue(Constants.accountName, forKey: KeyString.accountName)
+                    UserDefaults.standard.setValue(Constants.projectID, forKey: KeyString.projectID)
                     completion(.success(user))
                 } catch let e {
                     print(e.localizedDescription)
                     completion(.failure(e))
                 }
-                
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -50,6 +50,9 @@ class LoginService {
 
 struct KeyString {
     static let isLogin = "isLogin"
+    static let tokenUser = "Token"
+    static let projectID = "projectID"
+    static let accountName = "accountName"
 }
 
 extension String {

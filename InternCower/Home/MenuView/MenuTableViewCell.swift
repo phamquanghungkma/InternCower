@@ -16,6 +16,7 @@ class MenuTableViewCell: UITableViewCell {
         iCon.image = UIImage(named: model.image)
         iCon.frame.size = CGSize(width: 10, height: 10)
         titleLabel.text = model.title
+        titleLabel.textColor = .white
         titleLabel.font = UIFont.boldSystemFont(ofSize: model.type == .report ? 24 : 18)
         backgroundColor = UIColor.myBoldPurple
     }

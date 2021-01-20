@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVM-0F-f0t">
-                        <rect key="frame" x="8" y="8" width="42" height="28"/>
+                        <rect key="frame" x="12" y="8" width="42" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                     <constraint firstAttribute="bottom" secondItem="BVM-0F-f0t" secondAttribute="bottom" constant="8" id="C1R-9N-SxI"/>
                     <constraint firstItem="BVM-0F-f0t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="InH-Fg-7wZ"/>
                     <constraint firstItem="oC2-rb-Laa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="lKA-XB-lnl"/>
-                    <constraint firstItem="BVM-0F-f0t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="wmH-Ta-dhg"/>
+                    <constraint firstItem="BVM-0F-f0t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="wmH-Ta-dhg"/>
                     <constraint firstAttribute="bottom" secondItem="oC2-rb-Laa" secondAttribute="bottom" constant="8" id="xNI-Cm-Puc"/>
                 </constraints>
             </tableViewCellContentView>
@@ -47,6 +47,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
     </resources>
 </document>

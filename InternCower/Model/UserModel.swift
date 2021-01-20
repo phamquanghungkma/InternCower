@@ -14,5 +14,9 @@ struct User: Decodable {
 struct Profile: Decodable {
     var name: String
     var email: String
-    var id : Int
+    var id: Int
+    var project: Project
+}
+struct Project: Decodable {
+    var id: Int
 }

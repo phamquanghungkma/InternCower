@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // tách ra thành hàm riêng
         let loginVc = LoginVC()
-        
+        getUserDefaultsData()
 //        let reportVc =  Storyboard.view(identifier: "navigation")
         var rootVC: UIViewController?
         let status = UserDefaults.standard.bool(forKey: "isLogin")
@@ -27,5 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         return true
+    }
+    func getUserDefaultsData() {
+        Constants.tokenUser = UserDefaults.standard.string(forKey: KeyString.tokenUser)
+        Constants.projectID = UserDefaults.standard.integer(forKey: KeyString.projectID)
+        Constants.accountName = UserDefaults.standard.string(forKey: KeyString.accountName)
     }
 }

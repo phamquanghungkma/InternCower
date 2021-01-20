@@ -17,12 +17,12 @@ class LoginVC: UIViewController {
     // Cài pod tên là swiftlint
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        emailTextField.text = "PLLT001maikieulc"
+        passwordTextField.text = "12345678"
         setUpView()
     }
     func setUpView() {

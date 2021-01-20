@@ -22,4 +22,8 @@ class ReportCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func setup(model: ReportModel) {
+        labelReport.text = model.reportName
+        labelReport.numberOfLines = 0
+    }
 }

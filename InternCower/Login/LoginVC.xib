@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="InternCower" customModuleProvider="target">
             <connections>
-                <outlet property="EmailTF" destination="IzJ-he-1l8" id="CiD-7r-SCO"/>
-                <outlet property="LoginButton" destination="W6H-eW-s2d" id="Zyb-pf-ty0"/>
-                <outlet property="PassTF" destination="trM-Fn-Owv" id="YeC-Rn-dou"/>
+                <outlet property="emailTextField" destination="IzJ-he-1l8" id="6ss-Sa-7Eh"/>
+                <outlet property="loginButton" destination="W6H-eW-s2d" id="ezg-c0-neX"/>
+                <outlet property="passwordTextField" destination="trM-Fn-Owv" id="1Wz-vJ-KRG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

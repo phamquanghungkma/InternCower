@@ -15,4 +15,7 @@ struct ApiCommon {
     static let loginUrl: String = "\(baseUrl)/users/login"
     static let logoutUrl: String = ""
     static let registerUrl: String = ""
+    // MARK:
+    static let reportUrl: String = "\(baseUrl)/reports/list"
+    static let reportActivityUrl: String = "\(baseUrl)/reports/detail"
 }

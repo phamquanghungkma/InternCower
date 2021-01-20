@@ -11,6 +11,7 @@ import SideMenu
 
 class ReportVC: UIViewController {
     var menu: SideMenuNavigationController?
+    var reportModels: ReportModels?
     @IBOutlet weak var tableReport: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,28 +21,48 @@ class ReportVC: UIViewController {
         tableReport.separatorStyle = .singleLine
         tableReport.register(UINib(nibName: "ReportCell", bundle: nil), forCellReuseIdentifier: "ReportCell")
         initLeftMenu()
-    }
+        callAPIFetchData()
+}
     func initLeftMenu() {
         menu = SideMenuNavigationController(rootViewController: MenuViewController())
+        var settingMenu = SideMenuSettings()
         menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: true)
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         SideMenuManager.default.leftMenuNavigationController = menu
+        settingMenu.menuWidth = 240
+        settingMenu.statusBarEndAlpha = 0
+        settingMenu.presentationStyle.presentingEndAlpha = 0.5
+        menu?.settings = settingMenu
     }
     @IBAction func didTouchMenu(_ sender: Any) {
         present(menu!, animated: true)
     }
-
+    func callAPIFetchData() {
+         ReportService.shared.getReportData { result in
+                switch result {
+                case .success(let reportListData):
+                    DispatchQueue.main.async {
+                        self.reportModels = reportListData
+                        self.tableReport.reloadData()
+                    }
+                case .failure:
+                    break
+            }
+        }
+    }
 }
+
 extension ReportVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return reportModels?.reportList.count ?? 0
 
     }
 //    var heightCells: [CGFloat] = []
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ReportCell") as? ReportCell {
-            cell.labelReport.text = " FY 18/9 - T:4,5,6 "
-            cell.labelReport.numberOfLines = 0
+            guard let item = reportModels?.reportList[indexPath.row] else { return cell }
+            cell.setup(model: item)
             //        cell.labelReport.lineBreakMode = NSLineBreakMode.byWordWrapping
             //        cell.labelReport.frame = CGRect(x: 0, y: 0, width: cell.labelReport.frame.width, height: CGFloat.greatestFiniteMagnitude)
             //        cell.labelReport.sizeToFit()
@@ -55,7 +76,12 @@ extension ReportVC: UITableViewDataSource {
 extension ReportVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let activitiesVC =  ActivitiesVC()
-        navigationController?.pushViewController(activitiesVC, animated: true)
+        guard let report = reportModels?.reportList[indexPath.row] else {
+            return
+        }
+        activitiesVC.report = report
+        self.show(activitiesVC, sender: true)
+//        navigationController?.pushViewController(activitiesVC, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

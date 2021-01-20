@@ -8,21 +8,22 @@
 
 import Foundation
 
-enum SideOption: String {
+enum MenuLabel: String {
     case report = "REPORT"
     case guide = "Guide"
     case intro = "Introduction"
     case setting = "Setting"
     case logout = "Logout"
+    
 }
 
 struct MenuItemModel {
     var image: String
     var title: String
-    var type: SideOption
+    var type: MenuLabel
     init(image: String, title: String) {
         self.image = image
         self.title = title
-        self.type = SideOption(rawValue: title)!
+        self.type = MenuLabel(rawValue: title)!
     }
 }
