@@ -81,7 +81,6 @@ extension ReportVC: UITableViewDelegate {
         }
         activitiesVC.report = report
         self.show(activitiesVC, sender: true)
-//        navigationController?.pushViewController(activitiesVC, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

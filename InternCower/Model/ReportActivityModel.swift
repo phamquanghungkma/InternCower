@@ -25,10 +25,12 @@ struct ReportActivityModel: Decodable {
     var id: Int
     var reportId: Int
     var projectActivity: ProjectActivity?
+    var realTime: [RealTime]?
     private enum CodingKeys: String, CodingKey {
         case projectActivity = "project_activity"
         case id
         case reportId = "report_id"
+        case realTime = "real_time"
     }
 }
 struct ProjectActivity: Decodable {
@@ -37,5 +39,27 @@ struct ProjectActivity: Decodable {
     private enum CodingKeys: String, CodingKey {
         case id
         case name
+    }
+}
+struct RealTime: Decodable {
+    var id: Int
+    var title: String
+    var reportActivityID: Int
+    var provinceID: Int?
+    var districtID: Int?
+    var communeID: Int?
+    var villageID: Int?
+    var createdAt: String?
+    var startAt: String?
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case reportActivityID = "report_activity_id"
+        case provinceID = "province_id"
+        case districtID = "district_id"
+        case communeID = "commune_id"
+        case villageID = "village_id"
+        case createdAt = "created_at"
+        case startAt = "start_date"
     }
 }

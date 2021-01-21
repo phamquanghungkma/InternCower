@@ -36,6 +36,10 @@
 		7562EA83258212DA002758F8 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA81258212DA002758F8 /* ReportCell.swift */; };
 		7562EA84258212DA002758F8 /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7562EA82258212DA002758F8 /* ReportCell.xib */; };
 		7562EA8725821FF5002758F8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7562EA8625821FF5002758F8 /* Extension.swift */; };
+		75BF634725B93C0D002C3049 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF634525B93C0D002C3049 /* TrainingViewController.swift */; };
+		75BF634825B93C0D002C3049 /* TrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF634625B93C0D002C3049 /* TrainingViewController.xib */; };
+		75BF634C25B95C74002C3049 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF634A25B95C74002C3049 /* TrainingCell.swift */; };
+		75BF634D25B95C74002C3049 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF634B25B95C74002C3049 /* TrainingCell.xib */; };
 		75BFD16A25B69267009952BF /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16925B69267009952BF /* MenuHeader.swift */; };
 		75BFD16C25B6AEEC009952BF /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16B25B6AEEC009952BF /* ReportModel.swift */; };
 		75BFD16E25B6D37D009952BF /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16D25B6D37D009952BF /* MenuHeader.swift */; };
@@ -98,6 +102,10 @@
 		7562EA81258212DA002758F8 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		7562EA82258212DA002758F8 /* ReportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
 		7562EA8625821FF5002758F8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		75BF634525B93C0D002C3049 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		75BF634625B93C0D002C3049 /* TrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingViewController.xib; sourceTree = "<group>"; };
+		75BF634A25B95C74002C3049 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		75BF634B25B95C74002C3049 /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		75BFD16925B69267009952BF /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		75BFD16B25B6AEEC009952BF /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
 		75BFD16D25B6D37D009952BF /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuHeader.swift; path = InternCower/Home/MenuView/MenuHeader.swift; sourceTree = SOURCE_ROOT; };
@@ -191,6 +199,7 @@
 		75252F7B257E071E0067B851 /* InternCower */ = {
 			isa = PBXGroup;
 			children = (
+				75BF633E25B926F3002C3049 /* DetailActivity */,
 				7547243525A45500004877E1 /* Model */,
 				750118ED25873D7B003EB526 /* Activities */,
 				7562EA8525821FD0002758F8 /* Extension */,
@@ -322,6 +331,25 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		75BF633E25B926F3002C3049 /* DetailActivity */ = {
+			isa = PBXGroup;
+			children = (
+				75BF634925B95C3A002C3049 /* TrainingCell */,
+				75BF634525B93C0D002C3049 /* TrainingViewController.swift */,
+				75BF634625B93C0D002C3049 /* TrainingViewController.xib */,
+			);
+			path = DetailActivity;
+			sourceTree = "<group>";
+		};
+		75BF634925B95C3A002C3049 /* TrainingCell */ = {
+			isa = PBXGroup;
+			children = (
+				75BF634A25B95C74002C3049 /* TrainingCell.swift */,
+				75BF634B25B95C74002C3049 /* TrainingCell.xib */,
+			);
+			path = TrainingCell;
+			sourceTree = "<group>";
+		};
 		C9A38D847F09AFEB30CEEE52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,8 +473,10 @@
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
+				75BF634825B93C0D002C3049 /* TrainingViewController.xib in Resources */,
 				754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */,
 				75252F84257E071E0067B851 /* Main.storyboard in Resources */,
+				75BF634D25B95C74002C3049 /* TrainingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +588,7 @@
 				754FF21725AED72500189090 /* MenuItemModel.swift in Sources */,
 				75BFD16A25B69267009952BF /* MenuHeader.swift in Sources */,
 				754D90CD25B7E61700F09FBB /* LogoutService.swift in Sources */,
+				75BF634C25B95C74002C3049 /* TrainingCell.swift in Sources */,
 				7562EA8725821FF5002758F8 /* Extension.swift in Sources */,
 				75FBB5DF25B57AA600A1D5BE /* Constants.swift in Sources */,
 				7551AAD125B8175600195557 /* ReportActivityModel.swift in Sources */,
@@ -570,6 +601,7 @@
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
 				75FBB5E125B5833D00A1D5BE /* ReportService.swift in Sources */,
 				754FF21425AECB1500189090 /* MenuTableViewCell.swift in Sources */,
+				75BF634725B93C0D002C3049 /* TrainingViewController.swift in Sources */,
 				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
 				75BFD16C25B6AEEC009952BF /* ReportModel.swift in Sources */,
 				75BFD16E25B6D37D009952BF /* MenuHeader.swift in Sources */,

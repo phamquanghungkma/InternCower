@@ -20,9 +20,9 @@ class ActivitiesCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    func setup(model: ProjectActivity) {
-        self.titleLabel.text = model.name
-        self.countLabel.text = "(0)"
+    func setup(model1: ProjectActivity,model2:Int) {
+        self.titleLabel.text = model1.name
+        self.countLabel.text = "(\(model2))"
         self.countLabel.textColor = .red
     }
 }

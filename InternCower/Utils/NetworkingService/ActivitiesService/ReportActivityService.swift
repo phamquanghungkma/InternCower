@@ -31,7 +31,7 @@ class ReportActivityService {
                         $0.projectActivity != nil
                     }
                     for data in modelData.data!.reportActivity! {
-//                        print(data.projectActivity)
+                        print(data.projectActivity?.name)
                             
                     }
                     let reportActivity = modelData.data

@@ -12,7 +12,7 @@ class ActivitiesVC: BaseController {
 
     @IBOutlet weak var tableViewActivites: UITableView!
     var reportActivityResponse: [ReportActivityModel]?
-    var numberOfRow: Int?
+    var count: Int?
     var report: ReportModel? {
         didSet {
             self.navigationItem.title = report?.reportName
@@ -50,10 +50,15 @@ class ActivitiesVC: BaseController {
 //MARK: -Delegate/DataSource function
 extension ActivitiesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let realTimes = reportActivityResponse?[indexPath.row].realTime
+        let trainingVC = TrainingViewController()
+        trainingVC.numberOfReport = realTimes?.count
+        trainingVC.realTimeModel = realTimes
+        self.show(trainingVC, sender: true)
     }
 }
 extension ActivitiesVC: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reportActivityResponse?.count ?? 0
     }
@@ -65,7 +70,9 @@ extension ActivitiesVC: UITableViewDataSource {
             guard let projectActivity = listRepoertActivityModel.projectActivity else {
                 return cell
             }
-            cell.setup(model: projectActivity)
+            let realTimes = reportActivityResponse?[indexPath.row].realTime
+            self.count = realTimes?.count
+            cell.setup(model1: projectActivity, model2: count ?? 0)
             return cell
         }
         return UITableViewCell()
