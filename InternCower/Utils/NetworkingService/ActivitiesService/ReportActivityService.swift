@@ -18,7 +18,7 @@ class ReportActivityService {
                       "project_id": Constants.projectID ?? 0,
                       "id": reportID
                    ]
-        AF.request(ApiCommon.reportActivityUrl, method: .get,parameters: parameters).validate(statusCode: 200..<300).responseJSON { response in
+        AF.request(ApiCommon.reportActivityUrl, method: .get, parameters: parameters).validate(statusCode: 200..<300).responseJSON { response in
             switch response.result {
             case .success:
                 guard let data = response.data else {
@@ -31,7 +31,8 @@ class ReportActivityService {
                         $0.projectActivity != nil
                     }
                     for data in modelData.data!.reportActivity! {
-                        print(data.projectActivity)
+//                        print(data.projectActivity)
+                            
                     }
                     let reportActivity = modelData.data
                     let reportActivityModel = reportActivity?.reportActivity
@@ -41,7 +42,6 @@ class ReportActivityService {
                 }
             case .failure(let error):
                 completion(.failure(error))
-                break;
             }
         }
     }

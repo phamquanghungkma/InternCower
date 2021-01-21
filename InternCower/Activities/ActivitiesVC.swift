@@ -39,8 +39,8 @@ class ActivitiesVC: BaseController {
                     self.reportActivityResponse = data
                     self.tableViewActivites.reloadData()
                 }
-            case .failure( _):
-                    break;
+            case .failure:
+                    break
             }
         }
     }
@@ -65,7 +65,6 @@ extension ActivitiesVC: UITableViewDataSource {
             guard let projectActivity = listRepoertActivityModel.projectActivity else {
                 return cell
             }
-        
             cell.setup(model: projectActivity)
             return cell
         }
