@@ -42,6 +42,7 @@
 		75FBB5DF25B57AA600A1D5BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FBB5DE25B57AA600A1D5BE /* Constants.swift */; };
 		75FBB5E125B5833D00A1D5BE /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FBB5E025B5833D00A1D5BE /* ReportService.swift */; };
 		75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE418B25AD7FD400285CCB /* MenuViewController.swift */; };
+		F679A00F25BA763B00062569 /* CodeReview.strings in Resources */ = {isa = PBXBuildFile; fileRef = F679A00E25BA763B00062569 /* CodeReview.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		7C0EE1A51569F0CB18CB495C /* Pods-InternCower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCower.release.xcconfig"; path = "Target Support Files/Pods-InternCower/Pods-InternCower.release.xcconfig"; sourceTree = "<group>"; };
 		843C127A15E6AAE37A6D1F18 /* Pods_InternCowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternCowerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7538B6C259BA5995F6AF805 /* Pods-InternCowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCowerTests.debug.xcconfig"; path = "Target Support Files/Pods-InternCowerTests/Pods-InternCowerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F679A00E25BA763B00062569 /* CodeReview.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CodeReview.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				75252F87257E07250067B851 /* LaunchScreen.storyboard */,
 				75252F8A257E07250067B851 /* Info.plist */,
 				1827C33F25B87E5400B2D656 /* BaseController.swift */,
+				F679A00E25BA763B00062569 /* CodeReview.strings */,
 			);
 			path = InternCower;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
 				754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */,
+				F679A00F25BA763B00062569 /* CodeReview.strings in Resources */,
 				75252F84257E071E0067B851 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

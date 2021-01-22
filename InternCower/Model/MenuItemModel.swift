@@ -24,6 +24,6 @@ struct MenuItemModel {
     init(image: String, title: String) {
         self.image = image
         self.title = title
-        self.type = MenuLabel(rawValue: title)!
+        self.type = MenuLabel(rawValue: title)! // NAMDV comment: Không nên sử dụng !
     }
 }

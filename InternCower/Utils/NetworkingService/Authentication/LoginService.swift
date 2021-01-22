@@ -29,9 +29,11 @@ class LoginService {
                 }
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
+                    // NAMDV comment: Tách ra thành function
                     Constants.accountName = user.profile.name
                     Constants.tokenUser = user.token
                     Constants.projectID = user.profile.project.id
+                    // NAMDV comment: Tách ra thành function
                     UserDefaults.standard.setValue(true, forKey: KeyString.isLogin)
                     UserDefaults.standard.setValue(Constants.tokenUser, forKey: KeyString.tokenUser)
                     UserDefaults.standard.setValue(Constants.accountName, forKey: KeyString.accountName)

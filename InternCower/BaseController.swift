@@ -26,7 +26,7 @@ class BaseController: UIViewController {
     }
     */
     override func viewWillAppear(_ animated: Bool) {
-        
+        // NAMDV comment: gọi super
     }
     
 

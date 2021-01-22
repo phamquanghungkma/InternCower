@@ -18,6 +18,7 @@ class MenuViewController: UITableViewController {
       ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        // NAMDV comment: tách ra function
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.myBoldPurple
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")

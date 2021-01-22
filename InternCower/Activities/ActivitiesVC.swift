@@ -12,7 +12,7 @@ class ActivitiesVC: BaseController {
 
     @IBOutlet weak var tableViewActivites: UITableView!
     var reportActivityResponse: [ReportActivityModel]?
-    var numberOfRow: Int?
+    var numberOfRow: Int? // NAMDV comment: biến này bị thừa
     var report: ReportModel? {
         didSet {
             self.navigationItem.title = report?.reportName
@@ -22,6 +22,8 @@ class ActivitiesVC: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callAPI()
+
+        // NAMDV comment: khai báo tableView nên tách ra function
         tableViewActivites.rowHeight = UITableView.automaticDimension
         tableViewActivites.separatorStyle = .singleLine
         tableViewActivites.dataSource = self
@@ -37,9 +39,12 @@ class ActivitiesVC: BaseController {
             case .success(let data):
                 DispatchQueue.main.async {
                     self.reportActivityResponse = data
+                    // NAMDV comment: Xử lý TH mảng rỗng
                     self.tableViewActivites.reloadData()
                 }
+                // NAMDV comment: Sửa warnings
             case .failure( _):
+                // NAMDV comment: Xử lý TH lỗi (vd: hiển thị dialog)
                     break;
             }
         }

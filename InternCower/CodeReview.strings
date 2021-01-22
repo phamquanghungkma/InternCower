@@ -1,0 +1,15 @@
+/* 
+  CodeReview.strings
+  InternCower
+
+  Created by Nam Vu on 1/22/21.
+  Copyright © 2021 ThucTapSinh. All rights reserved.
+*/
+
+/*
+ Jan 22 2021
+ - Xem lại khoảng cách giữa các struct, class, variables trong cùng 1 file. Nên cách ra 1 dòng để phân biệt.
+ - Sửa lại các chỗ bị warnings
+ - Check lại giao diện, có vài chỗ chưa đúng với design
+ - Phải cho user biết lúc nào app đang lấy dữ liệu (vd: hiển thị loading indicator, loading view,...)
+ */

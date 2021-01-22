@@ -30,6 +30,7 @@ class ReportActivityService {
                     modelData.data?.reportActivity = array?.filter {
                         $0.projectActivity != nil
                     }
+                    // NAMDV comment: k dùng !
                     for data in modelData.data!.reportActivity! {
                         print(data.projectActivity)
                     }

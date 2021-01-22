@@ -11,10 +11,8 @@ import Alamofire
 
 class LoginVC: UIViewController {
     static let identifier = "LoginVc"
-    // xem lại cách đặt tên biến
-    // tên biên: camel case
-    // tên class: pascal case
-    // Cài pod tên là swiftlint
+
+    // NAMDV comment: Sửa lại tên biến, đây không phải email
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -67,6 +65,7 @@ class LoginVC: UIViewController {
         guard emailTextField.hasText, passwordTextField.hasText
             else {
                 if !emailTextField.hasText && !passwordTextField.hasText {
+                    // NAMDV comment: Task tạo alert này bị viết lại nhiều lần. Nên tạo function với những tham số đầu vào cần thiết để sử dụng. Tránh việc copy code.
                     let alert = UIAlertController(title: "Invalid", message: "Username and Password must not be empty", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                     present(alert, animated: false)
@@ -87,9 +86,11 @@ class LoginVC: UIViewController {
                     print("Pass empty")
                     return
                 }
+            // NAMDV comment: Sao lại return ở chỗ này?
                 return
         }
         print("Login button is called")
+        // NAMDV comment: Sao lại return ở chỗ này?
         return
     }
 }

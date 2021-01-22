@@ -15,6 +15,7 @@ class ReportVC: BaseController {
     @IBOutlet weak var tableReport: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // NAMDV comment: tách khai báo tableview thành function
         tableReport.dataSource = self
         tableReport.delegate = self
 //        tableReport.separatorColor = .clear
@@ -39,6 +40,7 @@ class ReportVC: BaseController {
         present(menu!, animated: true)
     }
     func callAPIFetchData() {
+        // NAMDV comment: Xử lý TH dữ liệu rỗng và TH lỗi
          ReportService.shared.getReportData { result in
                 switch result {
                 case .success(let reportListData):
@@ -80,6 +82,7 @@ extension ReportVC: UITableViewDelegate {
             return
         }
         activitiesVC.report = report
+        // NAMDV comment: hàm show này chỉ dùng cho iOS > 14, muốn dùng phải có version check
         self.show(activitiesVC, sender: true)
 //        navigationController?.pushViewController(activitiesVC, animated: true)
     }
