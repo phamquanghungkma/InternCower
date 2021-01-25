@@ -37,6 +37,10 @@ class TrainingViewController: UIViewController {
 }
 
 extension TrainingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailTrainingVC = Storyboard.view(identifier: "DetainTrainingVC")
+        self.show(detailTrainingVC, sender: nil)
+    }
 }
 extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

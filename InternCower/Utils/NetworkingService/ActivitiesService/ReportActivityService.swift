@@ -32,7 +32,6 @@ class ReportActivityService {
                     }
                     for data in modelData.data!.reportActivity! {
                         print(data.projectActivity?.name)
-                            
                     }
                     let reportActivity = modelData.data
                     let reportActivityModel = reportActivity?.reportActivity
