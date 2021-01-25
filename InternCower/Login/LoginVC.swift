@@ -87,10 +87,10 @@ class LoginVC: UIViewController {
                     return
                 }
             // NAMDV comment: Sao lại return ở chỗ này?
-                return
+         return
         }
         print("Login button is called")
         // NAMDV comment: Sao lại return ở chỗ này?
-        return
+//        return
     }
 }

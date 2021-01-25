@@ -16,14 +16,18 @@ class ReportVC: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // NAMDV comment: tách khai báo tableview thành function
-        tableReport.dataSource = self
-        tableReport.delegate = self
-//        tableReport.separatorColor = .clear
-        tableReport.separatorStyle = .singleLine
-        tableReport.register(UINib(nibName: "ReportCell", bundle: nil), forCellReuseIdentifier: "ReportCell")
+        setupTableView()
         initLeftMenu()
         callAPIFetchData()
-}
+    }
+    func setupTableView(){
+        tableReport.dataSource = self
+        tableReport.delegate = self
+        //        tableReport.separatorColor = .clear
+        tableReport.separatorStyle = .singleLine
+        tableReport.register(UINib(nibName: "ReportCell", bundle: nil), forCellReuseIdentifier: "ReportCell")
+    }
+    
     func initLeftMenu() {
         menu = SideMenuNavigationController(rootViewController: MenuViewController())
         var settingMenu = SideMenuSettings()

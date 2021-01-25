@@ -19,12 +19,14 @@ class MenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // NAMDV comment: tách ra function
+                setUpTableView()
+    }
+    func setUpTableView(){
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.myBoldPurple
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
-        // Do any additional setup after loading the view.
-    
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            return itemsMenu.count
        }

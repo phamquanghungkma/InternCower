@@ -11,12 +11,14 @@ struct User: Decodable {
     var token: String!
     var profile: Profile
 }
+
 struct Profile: Decodable {
     var name: String
     var email: String
     var id: Int
     var project: Project
 }
+
 struct Project: Decodable {
     var id: Int
 }

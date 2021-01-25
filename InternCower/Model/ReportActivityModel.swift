@@ -14,6 +14,7 @@ struct ResponseData: Decodable {
         case data
     }
 }
+
 struct ReportActivityData: Decodable {
     var reportActivity: [ReportActivityModel]?
     private enum CodingKeys: String, CodingKey {
@@ -31,6 +32,7 @@ struct ReportActivityModel: Decodable {
         case reportId = "report_id"
     }
 }
+
 struct ProjectActivity: Decodable {
     var name:String
     var id: Int

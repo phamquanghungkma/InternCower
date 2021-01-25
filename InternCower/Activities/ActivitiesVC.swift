@@ -12,7 +12,6 @@ class ActivitiesVC: BaseController {
 
     @IBOutlet weak var tableViewActivites: UITableView!
     var reportActivityResponse: [ReportActivityModel]?
-    var numberOfRow: Int? // NAMDV comment: biến này bị thừa
     var report: ReportModel? {
         didSet {
             self.navigationItem.title = report?.reportName
@@ -23,13 +22,17 @@ class ActivitiesVC: BaseController {
         super.viewDidLoad()
         callAPI()
 
-        // NAMDV comment: khai báo tableView nên tách ra function
+        setupTableView()
+    }
+    
+    func setupTableView(){
         tableViewActivites.rowHeight = UITableView.automaticDimension
         tableViewActivites.separatorStyle = .singleLine
         tableViewActivites.dataSource = self
         tableViewActivites.delegate = self
         tableViewActivites.register(UINib(nibName: "ActivitiesCell", bundle: nil), forCellReuseIdentifier: "ActivitiesCell")
     }
+    
     func callAPI() {
         guard let reportID = report?.reportID else {
             return
@@ -58,10 +61,12 @@ extension ActivitiesVC: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
 extension ActivitiesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reportActivityResponse?.count ?? 0
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ActivitiesCell") as? ActivitiesCell {
             guard let listRepoertActivityModel = reportActivityResponse?[indexPath.row] else {
