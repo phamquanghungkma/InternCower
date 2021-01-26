@@ -11,10 +11,9 @@ import Alamofire
 class UnitIndicatorService {
     public static let shared: UnitIndicatorService = UnitIndicatorService()
     func getIndicators(completion:@escaping((Result<UnitIndicators?,Error>)-> Void)){
-        
         let parameters: [String:Any] = [
             "token": Constants.tokenUser ?? "",
-            "lang":"vn"
+            "lang": "vn"
         ]
         AF.request(ApiCommon.uinitIndicatorUrl,method: .get,parameters: parameters).validate(statusCode:200..<300).responseJSON { response in
             switch response.result {
@@ -26,13 +25,12 @@ class UnitIndicatorService {
                     let uinitIndicator = try JSONDecoder().decode(UnitIndicators.self, from: data)
                     print("unit",uinitIndicator)
                     completion(.success(uinitIndicator))
-                }catch let e {
+                } catch let e {
                     completion(.failure(e))
                 }
             case .failure(let error):
                 completion(.failure(error))
             }
         }
-        
     }
 }

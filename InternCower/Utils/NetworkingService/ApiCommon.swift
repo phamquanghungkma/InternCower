@@ -19,4 +19,5 @@ struct ApiCommon {
     static let reportUrl: String = "\(baseUrl)/reports/list"
     static let reportActivityUrl: String = "\(baseUrl)/reports/detail"
     static let uinitIndicatorUrl: String = "\(baseUrl)/unit-indicators"
+    static let detailTrainingUrl: String = "\(baseUrl)/mobile-app/get-detail"
 }

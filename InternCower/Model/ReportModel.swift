@@ -18,8 +18,13 @@ struct ReportModels: Decodable {
 struct ReportModel: Decodable {
     var reportID: Int
     var reportName: String
+    var year:Int
+    var type:Int
+    
     private enum CodingKeys: String, CodingKey {
         case reportID = "id"
         case reportName = "name"
+        case year
+        case type
     }
 }

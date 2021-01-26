@@ -15,7 +15,6 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var mytableView: UITableView!
     var realTimeModel: [RealTime]?
-    
     var numberOfReport: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,15 @@ class TrainingViewController: UIViewController {
 
 extension TrainingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailTrainingVC = Storyboard.view(identifier: "DetainTrainingVC")
+        guard let realtimeID = realTimeModel?[indexPath.row].id else {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let detailTrainingVC = storyboard.instantiateViewController(withIdentifier: "DetainTrainingVC") as! DetailTrainingViewController
+        guard let detailTrainingVC = storyboard.instantiateViewController(withIdentifier: "DetainTrainingVC") as? DetailTrainingViewController else {
+            return
+        }
+        detailTrainingVC.realTimeID = realtimeID
         self.show(detailTrainingVC, sender: nil)
     }
 }
