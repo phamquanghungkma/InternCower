@@ -10,8 +10,9 @@ import UIKit
 
 class DetailTrainingViewController: UIViewController {
     var unitIndicators: UnitIndicators?
-    var detailTrainingModel: DetailTrainingModel?
+    var activityRealTimeNavList: [ActivityRealTimeNarravite]?
     var realTimeID: Int?
+    var projectIndicator: ProjectIndicator?
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var areaLabel: UILabel!
@@ -22,26 +23,26 @@ class DetailTrainingViewController: UIViewController {
         setupView()
         callAPIDetailTraining()
     }
-    
     func callAPIDetailTraining() {
         guard let realTimeID = realTimeID else {
             return
         }
         DetailTrainingService.shared.fetchDetailTrainingData(realTimeID: realTimeID) { result in
             switch result {
-                case .success(let detailTrainingData) :
+                case .success(let activityRealTimeNavList1) :
                     DispatchQueue.main.async {
-                                   self.detailTrainingModel = detailTrainingData
-                                   self.myTableView.reloadData()
-                               }
+                                   self.activityRealTimeNavList = activityRealTimeNavList1
+                    self.myTableView.reloadData()
+                        
+                }
                 case .failure: break }
         }
     }
-    
     func callIndicator() {
         UnitIndicatorService.shared.getIndicators { result in
                  switch result {
                  case .success(let unitIndicatorData):
+        
                      DispatchQueue.main.async {
                          self.unitIndicators = unitIndicatorData
                          self.myTableView.reloadData()
@@ -91,6 +92,8 @@ extension DetailTrainingViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = myTableView.dequeueReusableCell(withIdentifier: "DetailTrainingCell") as? DetailTrainingCell {
+            print("dulieuLa",self.activityRealTimeNavList?.first)
+            cell.activityRealTimeNavList = self.activityRealTimeNavList?.first
             return cell
         }
         return UITableViewCell()

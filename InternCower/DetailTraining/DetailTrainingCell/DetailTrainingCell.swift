@@ -17,6 +17,20 @@ class DetailTrainingCell: UITableViewCell {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
+    
+    var activityRealTimeNavList: ActivityRealTimeNarravite? {
+        didSet{
+            guard let id = activityRealTimeNavList?.id else {return}
+            guard let name = activityRealTimeNavList?.totalWomen else {return}
+            guard let totalNumber = activityRealTimeNavList?.totalNumber else {return}
+            guard let totalEnv = activityRealTimeNavList?.totalWomen else {return}
+            if(totalEnv==""){
+                self.womanEmwLabel.isHidden = true
+            }
+            self.numberLabel.text = totalNumber
+            print("didSet",id)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,6 +50,7 @@ class DetailTrainingCell: UITableViewCell {
         self.womanLabel.isHidden = true
         self.resultLabel.text = "Result:"
         setupLabel()
+        print("dulieubenCell la :",self.activityRealTimeNavList?.id)
     }
     func setupLabel(){
         var arrayLabel: [UILabel] = [resultLabel,womanEmwLabel,womanLabel,totalLabels,numberLabel,createdLabel]
@@ -50,8 +65,5 @@ extension UITextView {
         self.translatesAutoresizingMaskIntoConstraints = true
         self.sizeToFit()
         self.isScrollEnabled = false
-        
     }
-    
-    
 }
