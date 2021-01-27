@@ -22,6 +22,9 @@ class ReportVC: BaseController {
         tableReport.register(UINib(nibName: "ReportCell", bundle: nil), forCellReuseIdentifier: "ReportCell")
         initLeftMenu()
         callAPIFetchData()
+        
+       let vc =  CreateTrainingViewController(nibName: "CreateTrainingViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
 }
     func initLeftMenu() {
         menu = SideMenuNavigationController(rootViewController: MenuViewController())

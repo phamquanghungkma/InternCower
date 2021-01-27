@@ -14,6 +14,19 @@
 		182A477E25BF12DD009F58A2 /* DetailTrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182A477C25BF12DD009F58A2 /* DetailTrainingCell.xib */; };
 		182A478025BF2FF6009F58A2 /* UnitIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A477F25BF2FF6009F58A2 /* UnitIndicator.swift */; };
 		182A478225BF30F3009F58A2 /* UnitIndicatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A478125BF30F3009F58A2 /* UnitIndicatorService.swift */; };
+		184957B525C1AB2A00051AC6 /* CreateTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957B325C1AB2A00051AC6 /* CreateTrainingViewController.swift */; };
+		184957B625C1AB2A00051AC6 /* CreateTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957B425C1AB2A00051AC6 /* CreateTrainingViewController.xib */; };
+		184957BA25C1AB6000051AC6 /* CreatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957B825C1AB6000051AC6 /* CreatingCell.swift */; };
+		184957BB25C1AB6000051AC6 /* CreatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957B925C1AB6000051AC6 /* CreatingCell.xib */; };
+		184957BE25C1ABEA00051AC6 /* CreateTrainingHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957BC25C1ABEA00051AC6 /* CreateTrainingHeaderCell.swift */; };
+		184957BF25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957BD25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib */; };
+		184957C225C1AC1000051AC6 /* CreateTrainingInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957C025C1AC1000051AC6 /* CreateTrainingInputCell.swift */; };
+		184957C325C1AC1000051AC6 /* CreateTrainingInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957C125C1AC1000051AC6 /* CreateTrainingInputCell.xib */; };
+		184957C625C1AC2C00051AC6 /* CreateTrainingDateTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957C425C1AC2C00051AC6 /* CreateTrainingDateTimeCell.swift */; };
+		184957C725C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957C525C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib */; };
+		184957CA25C1ADF400051AC6 /* CreateTrainingAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957C825C1ADF400051AC6 /* CreateTrainingAttachmentCell.swift */; };
+		184957CB25C1ADF400051AC6 /* CreateTrainingAttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184957C925C1ADF400051AC6 /* CreateTrainingAttachmentCell.xib */; };
+		184957CD25C1AE6B00051AC6 /* CreateTrainingTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184957CC25C1AE6B00051AC6 /* CreateTrainingTableData.swift */; };
 		6DE332A62C1223D2D03F966C /* Pods_InternCowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843C127A15E6AAE37A6D1F18 /* Pods_InternCowerTests.framework */; };
 		750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750118EE25873DC6003EB526 /* ActivitiesVC.swift */; };
 		750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750118EF25873DC6003EB526 /* ActivitiesVC.xib */; };
@@ -79,6 +92,19 @@
 		182A477C25BF12DD009F58A2 /* DetailTrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrainingCell.xib; sourceTree = "<group>"; };
 		182A477F25BF2FF6009F58A2 /* UnitIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitIndicator.swift; sourceTree = "<group>"; };
 		182A478125BF30F3009F58A2 /* UnitIndicatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitIndicatorService.swift; sourceTree = "<group>"; };
+		184957B325C1AB2A00051AC6 /* CreateTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingViewController.swift; sourceTree = "<group>"; };
+		184957B425C1AB2A00051AC6 /* CreateTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingViewController.xib; sourceTree = "<group>"; };
+		184957B825C1AB6000051AC6 /* CreatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingCell.swift; sourceTree = "<group>"; };
+		184957B925C1AB6000051AC6 /* CreatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatingCell.xib; sourceTree = "<group>"; };
+		184957BC25C1ABEA00051AC6 /* CreateTrainingHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingHeaderCell.swift; sourceTree = "<group>"; };
+		184957BD25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingHeaderCell.xib; sourceTree = "<group>"; };
+		184957C025C1AC1000051AC6 /* CreateTrainingInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingInputCell.swift; sourceTree = "<group>"; };
+		184957C125C1AC1000051AC6 /* CreateTrainingInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingInputCell.xib; sourceTree = "<group>"; };
+		184957C425C1AC2C00051AC6 /* CreateTrainingDateTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingDateTimeCell.swift; sourceTree = "<group>"; };
+		184957C525C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingDateTimeCell.xib; sourceTree = "<group>"; };
+		184957C825C1ADF400051AC6 /* CreateTrainingAttachmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingAttachmentCell.swift; sourceTree = "<group>"; };
+		184957C925C1ADF400051AC6 /* CreateTrainingAttachmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingAttachmentCell.xib; sourceTree = "<group>"; };
+		184957CC25C1AE6B00051AC6 /* CreateTrainingTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingTableData.swift; sourceTree = "<group>"; };
 		36F4D99CAE36C50B54B4189C /* Pods-InternCowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCowerTests.release.xcconfig"; path = "Target Support Files/Pods-InternCowerTests/Pods-InternCowerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F7AFBFC7A50D26E09AE0A99 /* Pods_InternCower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InternCower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C3FDBDBA7E297310050A32 /* Pods-InternCower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternCower.debug.xcconfig"; path = "Target Support Files/Pods-InternCower/Pods-InternCower.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +213,34 @@
 			path = DetailTrainingCell;
 			sourceTree = "<group>";
 		};
+		184957B225C1AAB800051AC6 /* CreateTraining */ = {
+			isa = PBXGroup;
+			children = (
+				184957B725C1AB3700051AC6 /* CreateCell */,
+				184957B325C1AB2A00051AC6 /* CreateTrainingViewController.swift */,
+				184957B425C1AB2A00051AC6 /* CreateTrainingViewController.xib */,
+				184957CC25C1AE6B00051AC6 /* CreateTrainingTableData.swift */,
+			);
+			path = CreateTraining;
+			sourceTree = "<group>";
+		};
+		184957B725C1AB3700051AC6 /* CreateCell */ = {
+			isa = PBXGroup;
+			children = (
+				184957B825C1AB6000051AC6 /* CreatingCell.swift */,
+				184957B925C1AB6000051AC6 /* CreatingCell.xib */,
+				184957BC25C1ABEA00051AC6 /* CreateTrainingHeaderCell.swift */,
+				184957BD25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib */,
+				184957C025C1AC1000051AC6 /* CreateTrainingInputCell.swift */,
+				184957C125C1AC1000051AC6 /* CreateTrainingInputCell.xib */,
+				184957C425C1AC2C00051AC6 /* CreateTrainingDateTimeCell.swift */,
+				184957C525C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib */,
+				184957C825C1ADF400051AC6 /* CreateTrainingAttachmentCell.swift */,
+				184957C925C1ADF400051AC6 /* CreateTrainingAttachmentCell.xib */,
+			);
+			path = CreateCell;
+			sourceTree = "<group>";
+		};
 		750118ED25873D7B003EB526 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +285,7 @@
 		75252F7B257E071E0067B851 /* InternCower */ = {
 			isa = PBXGroup;
 			children = (
+				184957B225C1AAB800051AC6 /* CreateTraining */,
 				182A477725BF125A009F58A2 /* DetailTraining */,
 				75BF633E25B926F3002C3049 /* DetailActivity */,
 				7547243525A45500004877E1 /* Model */,
@@ -508,13 +563,19 @@
 				750BBF3425874FFC00139591 /* ActivitiesCell.xib in Resources */,
 				750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */,
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
+				184957B625C1AB2A00051AC6 /* CreateTrainingViewController.xib in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
+				184957BB25C1AB6000051AC6 /* CreatingCell.xib in Resources */,
 				182A477E25BF12DD009F58A2 /* DetailTrainingCell.xib in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
 				75BF634825B93C0D002C3049 /* TrainingViewController.xib in Resources */,
+				184957BF25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib in Resources */,
 				754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */,
+				184957C725C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib in Resources */,
 				75252F84257E071E0067B851 /* Main.storyboard in Resources */,
 				75BF634D25B95C74002C3049 /* TrainingCell.xib in Resources */,
+				184957CB25C1ADF400051AC6 /* CreateTrainingAttachmentCell.xib in Resources */,
+				184957C325C1AC1000051AC6 /* CreateTrainingInputCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,11 +683,13 @@
 			files = (
 				75252F81257E071E0067B851 /* ViewController.swift in Sources */,
 				7547243925A4572E004877E1 /* LoginService.swift in Sources */,
+				184957BE25C1ABEA00051AC6 /* CreateTrainingHeaderCell.swift in Sources */,
 				7562EA7F25820D69002758F8 /* ReportVC.swift in Sources */,
 				754FF21725AED72500189090 /* MenuItemModel.swift in Sources */,
 				75BFD16A25B69267009952BF /* MenuHeader.swift in Sources */,
 				754D90CD25B7E61700F09FBB /* LogoutService.swift in Sources */,
 				75BF634C25B95C74002C3049 /* TrainingCell.swift in Sources */,
+				184957C625C1AC2C00051AC6 /* CreateTrainingDateTimeCell.swift in Sources */,
 				7562EA8725821FF5002758F8 /* Extension.swift in Sources */,
 				75FBB5DF25B57AA600A1D5BE /* Constants.swift in Sources */,
 				7551AAD125B8175600195557 /* ReportActivityModel.swift in Sources */,
@@ -636,18 +699,23 @@
 				751157FC25BFC937007CC3DE /* DetailTrainingService.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				751157FA25BFBD0E007CC3DE /* DetailTrainingModel.swift in Sources */,
+				184957C225C1AC1000051AC6 /* CreateTrainingInputCell.swift in Sources */,
+				184957CA25C1ADF400051AC6 /* CreateTrainingAttachmentCell.swift in Sources */,
 				7525E80B2580A775004FB8B4 /* ApiCommon.swift in Sources */,
 				75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */,
+				184957CD25C1AE6B00051AC6 /* CreateTrainingTableData.swift in Sources */,
 				75252FAF257E0B1F0067B851 /* LoginVC.swift in Sources */,
 				75FBB5E125B5833D00A1D5BE /* ReportService.swift in Sources */,
 				754FF21425AECB1500189090 /* MenuTableViewCell.swift in Sources */,
 				182A477925BF1293009F58A2 /* DetailTrainingViewController.swift in Sources */,
+				184957BA25C1AB6000051AC6 /* CreatingCell.swift in Sources */,
 				75BF634725B93C0D002C3049 /* TrainingViewController.swift in Sources */,
 				7562EA83258212DA002758F8 /* ReportCell.swift in Sources */,
 				182A478225BF30F3009F58A2 /* UnitIndicatorService.swift in Sources */,
 				75BFD16C25B6AEEC009952BF /* ReportModel.swift in Sources */,
 				182A477D25BF12DD009F58A2 /* DetailTrainingCell.swift in Sources */,
 				75BFD16E25B6D37D009952BF /* MenuHeader.swift in Sources */,
+				184957B525C1AB2A00051AC6 /* CreateTrainingViewController.swift in Sources */,
 				7547243725A4551D004877E1 /* UserModel.swift in Sources */,
 				750BBF3325874FFC00139591 /* ActivitiesCell.swift in Sources */,
 				182A478025BF2FF6009F58A2 /* UnitIndicator.swift in Sources */,

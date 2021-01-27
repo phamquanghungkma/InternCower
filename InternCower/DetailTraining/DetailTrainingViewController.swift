@@ -10,10 +10,21 @@ import UIKit
 
 class DetailTrainingViewController: UIViewController {
     var unitIndicators: UnitIndicators?
-    var activityRealTimeNavList: [ActivityRealTimeNarravite]?
+    var dataDetail: DataDetail? {
+        didSet {
+            guard let activityRealTime = dataDetail?.activityRealTimeNarratives?.first else {
+                return
+            }
+            let createdTime = activityRealTime.createdAt
+            self.dateLabel.attributedText = setupLabel(title: "Date: ", content: createdTime ?? "")
+            guard let area = dataDetail?.area else {
+                return
+            }
+            self.areaLabel.attributedText = setupLabel(title: "Area: ", content: area)
+        }
+    }
     var realTimeID: Int?
     var projectIndicator: ProjectIndicator?
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
@@ -29,54 +40,49 @@ class DetailTrainingViewController: UIViewController {
         }
         DetailTrainingService.shared.fetchDetailTrainingData(realTimeID: realTimeID) { result in
             switch result {
-                case .success(let activityRealTimeNavList1) :
+            case .success(let activityRealTimeNavList1) :
                     DispatchQueue.main.async {
-                                   self.activityRealTimeNavList = activityRealTimeNavList1
+                    self.dataDetail = activityRealTimeNavList1
                     self.myTableView.reloadData()
-                        
                 }
-                case .failure: break }
+            case .failure: break }
         }
     }
     func callIndicator() {
         UnitIndicatorService.shared.getIndicators { result in
                  switch result {
                  case .success(let unitIndicatorData):
-        
                      DispatchQueue.main.async {
                          self.unitIndicators = unitIndicatorData
                          self.myTableView.reloadData()
                      }
-                 case .failure(_): break
+                 case .failure: break
                  }
              }
     }
-    func setupView(){
+    func setupView() {
         setUpTableView()
-        setupLabel(title: "Date :", content:"2012-01-21 01:51:01")
     }
-    
-    func setupLabel(title:String, content: String){
-        let paragraphStyle = NSMutableParagraphStyle()
-               paragraphStyle.alignment = .left
-               paragraphStyle.firstLineHeadIndent = 0
-                   let attributeBold: [NSAttributedString.Key: Any] = [
-                       .font: UIFont.boldSystemFont(ofSize: 15),
-                       .foregroundColor: UIColor.black,
-                       .paragraphStyle: paragraphStyle
-                          ]
-                   let attributeRegular: [NSAttributedString.Key: Any] = [
-                         .font: UIFont.systemFont(ofSize: 15),
-                         .foregroundColor: UIColor.black,
-                         .paragraphStyle: paragraphStyle
-                     ]
-               let attribute = NSMutableAttributedString()
-               attribute.append(NSMutableAttributedString(string: title, attributes: attributeBold))
-               attribute.append(NSMutableAttributedString(string: content, attributes: attributeRegular))
-               self.dateLabel.attributedText = attribute
-    }
-    
-    func setUpTableView(){
+       func setupLabel(title:String, content: String) -> NSAttributedString {
+         let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = .left
+                paragraphStyle.firstLineHeadIndent = 0
+                    let attributeBold: [NSAttributedString.Key: Any] = [
+                        .font: UIFont.boldSystemFont(ofSize: 15),
+                        .foregroundColor: UIColor.black,
+                        .paragraphStyle: paragraphStyle
+                           ]
+                    let attributeRegular: [NSAttributedString.Key: Any] = [
+                          .font: UIFont.systemFont(ofSize: 15),
+                          .foregroundColor: UIColor.black,
+                          .paragraphStyle: paragraphStyle
+                      ]
+                let attribute = NSMutableAttributedString()
+                attribute.append(NSMutableAttributedString(string: title, attributes: attributeBold))
+                attribute.append(NSMutableAttributedString(string: content, attributes: attributeRegular))
+                 return attribute
+     }
+    func setUpTableView() {
         myTableView.register(UINib(nibName: "DetailTrainingCell", bundle: nil), forCellReuseIdentifier: "DetailTrainingCell")
         myTableView.separatorStyle = .none
         myTableView.allowsSelection = false
@@ -92,8 +98,7 @@ extension DetailTrainingViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = myTableView.dequeueReusableCell(withIdentifier: "DetailTrainingCell") as? DetailTrainingCell {
-            print("dulieuLa",self.activityRealTimeNavList?.first)
-            cell.activityRealTimeNavList = self.activityRealTimeNavList?.first
+            cell.dataDetail = self.dataDetail
             return cell
         }
         return UITableViewCell()

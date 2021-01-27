@@ -11,7 +11,7 @@ import Alamofire
 
 class DetailTrainingService {
     public static var shared: DetailTrainingService = DetailTrainingService()
-    func fetchDetailTrainingData(realTimeID: Int, completion:@escaping((Result<[ActivityRealTimeNarravite]?,Error>)->Void)){
+    func fetchDetailTrainingData(realTimeID: Int, completion:@escaping((Result<DataDetail?,Error>)->Void)){
         let parameters: [String: Any] = [
             "lang": "vn",
             "token": Constants.tokenUser ?? "",
@@ -25,9 +25,8 @@ class DetailTrainingService {
                 }
                 do {
                     let detailTrainingResponse = try JSONDecoder().decode(DetailTrainingModel.self, from: data)
-                    let activityRealTimeNavList = detailTrainingResponse.data?.activityRealTimeNarratives!
-                    print("typeOfdataDetail",type(of: activityRealTimeNavList))
-                completion(.success(activityRealTimeNavList))
+                    let dataDetailResponse = detailTrainingResponse.data
+                completion(.success(dataDetailResponse))
                 } catch let e {
                     completion(.failure(e))
                 }
