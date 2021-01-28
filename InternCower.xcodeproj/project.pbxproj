@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1584F4B50BECF1A880662871 /* Pods_InternCower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7AFBFC7A50D26E09AE0A99 /* Pods_InternCower.framework */; };
+		181AAF6125C2FCA60016F97C /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AAF6025C2FCA60016F97C /* ImageCollectionView.swift */; };
+		181AAF6325C2FD570016F97C /* ImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181AAF6225C2FD570016F97C /* ImageCollectionView.xib */; };
 		1827C34025B87E5400B2D656 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C33F25B87E5400B2D656 /* BaseController.swift */; };
 		182A477925BF1293009F58A2 /* DetailTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A477825BF1293009F58A2 /* DetailTrainingViewController.swift */; };
 		182A477D25BF12DD009F58A2 /* DetailTrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A477B25BF12DD009F58A2 /* DetailTrainingCell.swift */; };
@@ -87,6 +89,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181AAF6025C2FCA60016F97C /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
+		181AAF6225C2FD570016F97C /* ImageCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionView.xib; sourceTree = "<group>"; };
 		1827C33F25B87E5400B2D656 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		182A477825BF1293009F58A2 /* DetailTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingViewController.swift; sourceTree = "<group>"; };
 		182A477B25BF12DD009F58A2 /* DetailTrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingCell.swift; sourceTree = "<group>"; };
@@ -195,6 +199,23 @@
 				36F4D99CAE36C50B54B4189C /* Pods-InternCowerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		181AAF5825C2F56E0016F97C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				181AAF5925C2F5940016F97C /* UIImageViewCustome */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		181AAF5925C2F5940016F97C /* UIImageViewCustome */ = {
+			isa = PBXGroup;
+			children = (
+				181AAF6025C2FCA60016F97C /* ImageCollectionView.swift */,
+				181AAF6225C2FD570016F97C /* ImageCollectionView.xib */,
+			);
+			path = UIImageViewCustome;
 			sourceTree = "<group>";
 		};
 		182A477725BF125A009F58A2 /* DetailTraining */ = {
@@ -337,6 +358,7 @@
 		7525E8062580A461004FB8B4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				181AAF5825C2F56E0016F97C /* Common */,
 				7525E8072580A46F004FB8B4 /* NetworkingService */,
 				75FBB5DE25B57AA600A1D5BE /* Constants.swift */,
 				75107E4B25C248580077EA33 /* Protocol.swift */,
@@ -572,6 +594,7 @@
 				182A477E25BF12DD009F58A2 /* DetailTrainingCell.xib in Resources */,
 				75252FB0257E0B1F0067B851 /* LoginVC.xib in Resources */,
 				75BF634825B93C0D002C3049 /* TrainingViewController.xib in Resources */,
+				181AAF6325C2FD570016F97C /* ImageCollectionView.xib in Resources */,
 				184957BF25C1ABEA00051AC6 /* CreateTrainingHeaderCell.xib in Resources */,
 				754FF21525AECB1500189090 /* MenuTableViewCell.xib in Resources */,
 				184957C725C1AC2C00051AC6 /* CreateTrainingDateTimeCell.xib in Resources */,
@@ -698,6 +721,7 @@
 				7551AAD125B8175600195557 /* ReportActivityModel.swift in Sources */,
 				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
 				1827C34025B87E5400B2D656 /* BaseController.swift in Sources */,
+				181AAF6125C2FCA60016F97C /* ImageCollectionView.swift in Sources */,
 				75107E4C25C248580077EA33 /* Protocol.swift in Sources */,
 				7551AACF25B80A9C00195557 /* ReportActivityService.swift in Sources */,
 				751157FC25BFC937007CC3DE /* DetailTrainingService.swift in Sources */,

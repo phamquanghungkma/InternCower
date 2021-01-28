@@ -49,10 +49,10 @@ class CreateTrainingTableData: NSObject {
     }
     func createDefault() {
         models.removeAll()
-        models.append(CreateTrainingInputViewModel(.title, name:"Title"))
-        models.append(CreateTrainingInputViewModel(.startDate, name:"Start Date"))
-        models.append(CreateTrainingInputViewModel(.endDate, name:"End Date"))
-        models.append(CreateTrainingInputViewModel(.city, name:"City"))
+        models.append(CreateTrainingInputViewModel(.title, name: "Title"))
+        models.append(CreateTrainingInputViewModel(.startDate, name: "Start Date"))
+        models.append(CreateTrainingInputViewModel(.endDate, name: "End Date"))
+        models.append(CreateTrainingInputViewModel(.city, name: "City"))
     }
 
     func reload() {
@@ -67,7 +67,7 @@ extension CreateTrainingTableData: UITableViewDelegate, UITableViewDataSource {
         // tam thoi la 3
         return numOfSection
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case CreateTrainingSectionEnum.header.rawValue:
             return 1
