@@ -27,6 +27,7 @@ class DetailTrainingCell: UITableViewCell {
                 return
             }
             self.createdLabel.attributedText = setupLabels(title: "Created : ", content: createdUser.name ?? "")
+            self.resultLabel.attributedText = setupLabels(title: "Result", content: "")
             let total = activityRealtimeNara.total
             let totalWomen = activityRealtimeNara.totalWomen
             let totalEmw = activityRealtimeNara.totalEmw
@@ -36,10 +37,7 @@ class DetailTrainingCell: UITableViewCell {
             let beneficiaryType = projectIndicator?.measurementTypeBeneficiary
             let numberOfType = projectIndicator?.measurementTypeNumOf
                       if beneficiaryType == 1 {
-                        self.totalLabels.attributedText = setupLabels(title: "Total: ", content: total ?? "")
-                        self.womanLabel.attributedText = setupLabels(title: "Woman", content: totalWomen ?? "")
-                        self.womanEmwLabel.attributedText = setupLabels(title: "Woman ", content: "(ethnic minority): \(totalEmw)")
-                        self.totalLabels.text = total
+                        self.setUpBeneficiaryLabels(totalStr: total ?? "", womanStr: totalWomen ?? "", womanEmwStr: totalEmw ?? "")
                         self.beneficiaryType()
                       } else if beneficiaryType == 0 && numberOfType == 1 {
                         let amountAttributed = setupLabels(title: "Amount : ", content: amountSL ?? "")
@@ -53,8 +51,8 @@ class DetailTrainingCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupTextView()
+        setUpDefautlLabel()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -64,26 +62,30 @@ class DetailTrainingCell: UITableViewCell {
     func setupTextView() {
         self.contentTextView.isEditable = false
         self.contentTextView.isScrollEnabled = false
-        self.resultLabel.text = "Result :"
-//        setupLabel()
+        self.contentTextView.font = UIFont.systemFont(ofSize: 16)
     }
     func beneficiaryType() {
         self.numberLabel.isHidden = true
         self.attachmentLabel.isHidden = true
     }
+    func setUpBeneficiaryLabels(totalStr: String, womanStr: String, womanEmwStr: String) {
+        self.totalLabels.attributedText = setupLabels(title: "Total: ", content: totalStr)
+        self.womanLabel.attributedText = setupLabels(title: "Woman", content: womanStr)
+        self.womanEmwLabel.attributedText = setupLabels(title: "Woman ", content: "(ethnic minority): \(womanEmwStr)")
+    }
     func numOfType() {
         self.totalLabels.isHidden = true
         self.womanLabel.isHidden = true
         self.womanEmwLabel.isHidden = true
+        self.attachmentLabel.attributedText = setupLabels(title: "Attachment", content: "")
     }
-    func setupLabel() {
+    func setUpDefautlLabel() {
         let arrayLabel: [UILabel] = [resultLabel, womanEmwLabel, womanLabel, totalLabels, numberLabel, createdLabel, attachmentLabel]
         for item in arrayLabel {
             item.font = .boldSystemFont(ofSize: 16)
         }
     }
-    
-    func setupLabels(title:String, content: String) -> NSAttributedString {
+    func setupLabels(title: String, content: String) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
                paragraphStyle.alignment = .left
                paragraphStyle.firstLineHeadIndent = 0

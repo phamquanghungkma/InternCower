@@ -32,6 +32,7 @@
 		750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750118EF25873DC6003EB526 /* ActivitiesVC.xib */; };
 		750BBF3325874FFC00139591 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BBF3125874FFC00139591 /* ActivitiesCell.swift */; };
 		750BBF3425874FFC00139591 /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750BBF3225874FFC00139591 /* ActivitiesCell.xib */; };
+		75107E4C25C248580077EA33 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75107E4B25C248580077EA33 /* Protocol.swift */; };
 		751157FA25BFBD0E007CC3DE /* DetailTrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751157F925BFBD0E007CC3DE /* DetailTrainingModel.swift */; };
 		751157FC25BFC937007CC3DE /* DetailTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751157FB25BFC937007CC3DE /* DetailTrainingService.swift */; };
 		75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75252F7C257E071E0067B851 /* AppDelegate.swift */; };
@@ -112,6 +113,7 @@
 		750118EF25873DC6003EB526 /* ActivitiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesVC.xib; sourceTree = "<group>"; };
 		750BBF3125874FFC00139591 /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		750BBF3225874FFC00139591 /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
+		75107E4B25C248580077EA33 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		751157F925BFBD0E007CC3DE /* DetailTrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingModel.swift; sourceTree = "<group>"; };
 		751157FB25BFC937007CC3DE /* DetailTrainingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingService.swift; sourceTree = "<group>"; };
 		75252F79257E071E0067B851 /* InternCower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternCower.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +339,7 @@
 			children = (
 				7525E8072580A46F004FB8B4 /* NetworkingService */,
 				75FBB5DE25B57AA600A1D5BE /* Constants.swift */,
+				75107E4B25C248580077EA33 /* Protocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				7551AAD125B8175600195557 /* ReportActivityModel.swift in Sources */,
 				750118F025873DC6003EB526 /* ActivitiesVC.swift in Sources */,
 				1827C34025B87E5400B2D656 /* BaseController.swift in Sources */,
+				75107E4C25C248580077EA33 /* Protocol.swift in Sources */,
 				7551AACF25B80A9C00195557 /* ReportActivityService.swift in Sources */,
 				751157FC25BFC937007CC3DE /* DetailTrainingService.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,

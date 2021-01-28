@@ -25,7 +25,8 @@ class TrainingViewController: UIViewController {
         mytableView.register(UINib(nibName: "TrainingCell", bundle: nil), forCellReuseIdentifier: "TrainingCell")
     }
     @IBAction func didTouchAddNewButton(_ sender: Any) {
-        print("did Touch Add New")
+        let vc =  CreateTrainingViewController(nibName: "CreateTrainingViewController", bundle: nil)
+               self.navigationController?.pushViewController(vc, animated: true)
     }
     func setupView() {
         self.buttonAddNew.layer.cornerRadius = 24

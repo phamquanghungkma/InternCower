@@ -20,7 +20,7 @@ class DetailTrainingViewController: UIViewController {
             guard let area = dataDetail?.area else {
                 return
             }
-            self.areaLabel.attributedText = setupLabel(title: "Area: ", content: area)
+            self.areaLabel.attributedText = setupLabel(title: "Area: ", content: handleFirstCol(contentString: area))
         }
     }
     var realTimeID: Int?
@@ -63,7 +63,7 @@ class DetailTrainingViewController: UIViewController {
     func setupView() {
         setUpTableView()
     }
-       func setupLabel(title:String, content: String) -> NSAttributedString {
+       func setupLabel(title: String, content: String) -> NSAttributedString {
          let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.alignment = .left
                 paragraphStyle.firstLineHeadIndent = 0
@@ -87,6 +87,20 @@ class DetailTrainingViewController: UIViewController {
         myTableView.separatorStyle = .none
         myTableView.allowsSelection = false
     }
+    func handleFirstCol(contentString: String) -> String {
+           var handledString = contentString
+           if !handledString.isEmpty && contentString.first == "," {
+               handledString.remove(at: handledString.startIndex)
+           } else {
+               handledString = " " + handledString
+           }
+           return handledString
+       }
+//    func handleSpecialString(contenStr: String)-> String {
+//        var handledStr = contenStr
+//        
+//    }
+
 
 }
 

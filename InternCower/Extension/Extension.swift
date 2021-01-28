@@ -23,7 +23,7 @@ extension UIColor {
     static var myYellow = UIColor(named: "E89B15")!
     static var myXam = UIColor(named: "B7B7B7")!
 }
-extension UIView{
+extension UIView {
     // this is a function
     // swiftlint:disable function_parameter_count
     func anchor(
@@ -51,7 +51,6 @@ extension UIView{
         if let right = right {
             self.rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
-        
         if width != 0 {
             widthAnchor.constraint(equalToConstant: width).isActive = true
         }
@@ -59,7 +58,5 @@ extension UIView{
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
     }
-    
 }
-
 

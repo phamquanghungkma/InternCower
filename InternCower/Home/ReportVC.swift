@@ -23,8 +23,6 @@ class ReportVC: BaseController {
         initLeftMenu()
         callAPIFetchData()
         
-       let vc =  CreateTrainingViewController(nibName: "CreateTrainingViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
 }
     func initLeftMenu() {
         menu = SideMenuNavigationController(rootViewController: MenuViewController())

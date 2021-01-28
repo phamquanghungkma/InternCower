@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol CreateTrainingSectionDelegate: AnyObject {
-    func touchInput(type: CreateTrainingInputType)
-}
+
 enum CreateTrainingSectionEnum : Int {
     case header = 0
     case info = 1
@@ -26,10 +24,10 @@ enum CreateTrainingInputType {
     // ... tung cai  input kia
 }
 
-class CreateTrainingInputViewModel : NSObject {
-    var type : CreateTrainingInputType
-    var name : String
-    var value : Any?
+class CreateTrainingInputViewModel {
+    var type: CreateTrainingInputType
+    var name: String
+    var value: Any?
 
     init(_ type: CreateTrainingInputType, name: String = "", value: Any? = nil){
         self.type   = type
@@ -43,7 +41,7 @@ class CreateTrainingTableData: NSObject {
     let numOfSection = 3
     var models: [CreateTrainingInputViewModel] = [CreateTrainingInputViewModel]()
     var tableView: UITableView!
-    weak var delegate:CreateTrainingSectionDelegate?
+    var delegate:CreateTrainingSectionDelegate?
     init(_ tb: UITableView) {
         super.init()
         self.tableView = tb
@@ -58,22 +56,18 @@ class CreateTrainingTableData: NSObject {
     }
 
     func reload() {
-   
 //        UIView.setAnimationsEnabled(true)
 //        self.tableView.beginUpdates()
         self.tableView.reloadSections([CreateTrainingSectionEnum.info.rawValue], with: .fade)
 //        self.tableView.endUpdates()
-      
     }
 }
 extension CreateTrainingTableData: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         // tam thoi la 3
         return numOfSection
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         switch section {
         case CreateTrainingSectionEnum.header.rawValue:
             return 1
@@ -96,7 +90,7 @@ extension CreateTrainingTableData: UITableViewDelegate, UITableViewDataSource {
             return cell
         case CreateTrainingSectionEnum.info.rawValue:
             var model = self.models[indexPath.row]
-         /// cho nay dang le se swith case theo model.type de hien thi cac cell khac nhau [datetime, title, chon dia chi , demo  nen chi lam 1 cell cho nhanh =))]
+         /// cho nay dang le se swith case theo model.type de hien thi cac cell khac nhau [datetime, title, chon dia chi , demo  nen chi lam 1 cell cho nhanh ]
             let cell = tableView.dequeueReusableCell(withIdentifier: "CreateTrainingInputCell", for: indexPath) as? CreateTrainingInputCell
             cell?.setupData(model: model)
             return cell ?? UITableViewCell()
