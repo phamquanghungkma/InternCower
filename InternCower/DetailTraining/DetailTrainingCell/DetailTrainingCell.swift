@@ -48,6 +48,8 @@ class DetailTrainingCell: UITableViewCell {
                       }
         }
     }
+    
+    let imageCollectionView = Bundle.main.loadNibNamed(ImageCollectionView.identifier, owner: self, options: nil)?.first as! ImageCollectionView
 
     override func awakeFromNib() {
         super.awakeFromNib()

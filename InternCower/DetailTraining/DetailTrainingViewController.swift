@@ -111,7 +111,7 @@ extension DetailTrainingViewController: UITableViewDataSource {
         1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = myTableView.dequeueReusableCell(withIdentifier: "DetailTrainingCell") as? DetailTrainingCell {
+        if let cell = myTableView.dequeueReusableCell(withIdentifier: "DetailTrainingCell",for: indexPath) as? DetailTrainingCell {
             cell.dataDetail = self.dataDetail
             return cell
         }

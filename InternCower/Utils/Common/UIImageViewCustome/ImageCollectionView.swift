@@ -11,14 +11,20 @@ import UIKit
 class ImageCollectionView: UIView {
     
     
+    static let identifier = "ImageCollectionView"
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var captionTextView: UITextView!
     override class func awakeFromNib() {
         super.awakeFromNib()
         
+        
     }
     
-    
-    
+
     
 }
+
+extension ImageCollectionView: UICollectionViewDelegate {
+    
+}
+

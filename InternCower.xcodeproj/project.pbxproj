@@ -66,6 +66,8 @@
 		75BFD16A25B69267009952BF /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16925B69267009952BF /* MenuHeader.swift */; };
 		75BFD16C25B6AEEC009952BF /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16B25B6AEEC009952BF /* ReportModel.swift */; };
 		75BFD16E25B6D37D009952BF /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFD16D25B6D37D009952BF /* MenuHeader.swift */; };
+		75E1743F25C7F83500930ED1 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E1743D25C7F83500930ED1 /* ImageCell.swift */; };
+		75E1744025C7F83500930ED1 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E1743E25C7F83500930ED1 /* ImageCell.xib */; };
 		75FBB5DF25B57AA600A1D5BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FBB5DE25B57AA600A1D5BE /* Constants.swift */; };
 		75FBB5E125B5833D00A1D5BE /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FBB5E025B5833D00A1D5BE /* ReportService.swift */; };
 		75FE418C25AD7FD400285CCB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE418B25AD7FD400285CCB /* MenuViewController.swift */; };
@@ -155,6 +157,8 @@
 		75BFD16925B69267009952BF /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		75BFD16B25B6AEEC009952BF /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
 		75BFD16D25B6D37D009952BF /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuHeader.swift; path = InternCower/Home/MenuView/MenuHeader.swift; sourceTree = SOURCE_ROOT; };
+		75E1743D25C7F83500930ED1 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		75E1743E25C7F83500930ED1 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		75FBB5DE25B57AA600A1D5BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75FBB5E025B5833D00A1D5BE /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
 		75FE418B25AD7FD400285CCB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		181AAF5925C2F5940016F97C /* UIImageViewCustome */ = {
 			isa = PBXGroup;
 			children = (
+				75E1743C25C7F80A00930ED1 /* Cell */,
 				181AAF6025C2FCA60016F97C /* ImageCollectionView.swift */,
 				181AAF6225C2FD570016F97C /* ImageCollectionView.xib */,
 			);
@@ -467,6 +472,15 @@
 			path = TrainingCell;
 			sourceTree = "<group>";
 		};
+		75E1743C25C7F80A00930ED1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				75E1743D25C7F83500930ED1 /* ImageCell.swift */,
+				75E1743E25C7F83500930ED1 /* ImageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C9A38D847F09AFEB30CEEE52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +602,7 @@
 				750BBF3425874FFC00139591 /* ActivitiesCell.xib in Resources */,
 				750118F125873DC6003EB526 /* ActivitiesVC.xib in Resources */,
 				75252F89257E07250067B851 /* LaunchScreen.storyboard in Resources */,
+				75E1744025C7F83500930ED1 /* ImageCell.xib in Resources */,
 				184957B625C1AB2A00051AC6 /* CreateTrainingViewController.xib in Resources */,
 				75252F86257E07250067B851 /* Assets.xcassets in Resources */,
 				184957BB25C1AB6000051AC6 /* CreatingCell.xib in Resources */,
@@ -724,6 +739,7 @@
 				181AAF6125C2FCA60016F97C /* ImageCollectionView.swift in Sources */,
 				75107E4C25C248580077EA33 /* Protocol.swift in Sources */,
 				7551AACF25B80A9C00195557 /* ReportActivityService.swift in Sources */,
+				75E1743F25C7F83500930ED1 /* ImageCell.swift in Sources */,
 				751157FC25BFC937007CC3DE /* DetailTrainingService.swift in Sources */,
 				75252F7D257E071E0067B851 /* AppDelegate.swift in Sources */,
 				751157FA25BFBD0E007CC3DE /* DetailTrainingModel.swift in Sources */,
