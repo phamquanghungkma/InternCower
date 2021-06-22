@@ -18,6 +18,19 @@ class DetailTrainingCell: UITableViewCell {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var attachmentLabel: UILabel!
+    @IBOutlet weak var collectionImageView: UIView!
+    
+//     let imageCollectionView: UIView = {
+//        guard let imageCollectionView = Bundle.main.loadNibNamed(ImageCollectionView.identifier, owner: self, options: nil)?.first as? ImageCollectionView else {
+//            return UIView()
+//        }
+//        imageCollectionView.setUpCollectionView()
+//
+//        return imageCollectionView
+//    }()
+
+ let imageCollectionView = Bundle.main.loadNibNamed(ImageCollectionView.identifier, owner: self, options: nil)?.first as? ImageCollectionView
+    var documents:[String]?
     var dataDetail: DataDetail? {
         didSet {
             guard let activityRealtimeNara =  dataDetail?.activityRealTimeNarratives?.first else {
@@ -46,15 +59,20 @@ class DetailTrainingCell: UITableViewCell {
                         self.contentTextView.layoutIfNeeded()
                         self.numOfType()
                       }
+            let documents = dataDetail?.documents ?? [""]
+            self.imageCollectionView?.imageUrlList = documents
         }
     }
-    
-    let imageCollectionView = Bundle.main.loadNibNamed(ImageCollectionView.identifier, owner: self, options: nil)?.first as! ImageCollectionView
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTextView()
         setUpDefautlLabel()
+        imageCollectionView?.setUpCollectionView()
+        imageCollectionView?.backgroundColor = .gray
+        collectionImageView.addSubview(imageCollectionView!)
+        imageCollectionView?.imageCollectionView.reloadData()
+        imageCollectionView?.frame = collectionImageView.bounds
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,6 +83,8 @@ class DetailTrainingCell: UITableViewCell {
         self.contentTextView.isEditable = false
         self.contentTextView.isScrollEnabled = false
         self.contentTextView.font = UIFont.systemFont(ofSize: 16)
+        contentTextView.translatesAutoresizingMaskIntoConstraints = false
+        contentTextView.sizeToFit()
     }
     func beneficiaryType() {
         self.numberLabel.isHidden = true

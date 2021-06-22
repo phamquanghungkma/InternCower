@@ -22,6 +22,7 @@ struct DataDetail: Decodable {
     var updatedAt: String?
     var createdUser: CreatedUser?
     var caption: String?
+    var documents: [String]?
     private enum CodingKeys: String, CodingKey {
         case activityRealTimeNarratives = "activity_realtime_narrative"
         case area
@@ -29,7 +30,7 @@ struct DataDetail: Decodable {
         case updatedAt = "updated_at"
         case createdUser = "created_user"
         case caption
-        
+        case documents
     }
 }
 

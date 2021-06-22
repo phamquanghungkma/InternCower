@@ -20,6 +20,7 @@ class DetailTrainingViewController: UIViewController {
             guard let area = dataDetail?.area else {
                 return
             }
+            let captions = dataDetail?.caption ?? ""
             self.areaLabel.attributedText = setupLabel(title: "Area: ", content: handleFirstCol(contentString: area))
         }
     }
@@ -86,7 +87,9 @@ class DetailTrainingViewController: UIViewController {
         myTableView.register(UINib(nibName: "DetailTrainingCell", bundle: nil), forCellReuseIdentifier: "DetailTrainingCell")
         myTableView.separatorStyle = .none
         myTableView.allowsSelection = false
+        //myTableView.rowHeight = 400//UITableView.automaticDimension
     }
+    
     func handleFirstCol(contentString: String) -> String {
            var handledString = contentString
            if !handledString.isEmpty && contentString.first == "," {
@@ -113,6 +116,7 @@ extension DetailTrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = myTableView.dequeueReusableCell(withIdentifier: "DetailTrainingCell",for: indexPath) as? DetailTrainingCell {
             cell.dataDetail = self.dataDetail
+            cell.imageCollectionView?.imageCollectionView.reloadData()
             return cell
         }
         return UITableViewCell()
